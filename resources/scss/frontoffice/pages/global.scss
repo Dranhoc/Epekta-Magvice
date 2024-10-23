@@ -105,6 +105,7 @@ section {
 
     z-index: -1;
   }
+
   &__content {
     height: calc(100% - 40px);
     border-radius: 20px;
@@ -112,4 +113,25 @@ section {
     background: white;
     padding: 40px;
   }
+
+  &--emergency {
+    position: relative;
+    width: 100vw;
+
+    z-index: 2;
+    @screen md {
+      position: absolute;
+      top: -270px;
+      right: 10%;
+      max-width: 550px;
+    }
+  }
+}
+
+.deco-gradient {
+  width: 200px;
+  height: 4px;
+  border-radius: 5px;
+  background: var(--gradient);
+  margin-block: 25px;
 }

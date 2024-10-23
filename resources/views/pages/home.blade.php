@@ -1,6 +1,6 @@
 @extends('partials.template')
 @section('content')
-  <section class="s-hero">
+  <section class="s-hero py-200">
     <figure class="s-hero__visual">
       <img src="{{ asset('/images/header-bg.jpg') }}" alt="Background of a nature scene">
     </figure>
@@ -14,8 +14,9 @@
       </div>
     </div>
   </section>
-  <article class="lg:d-grid container -mt-200">
-    <div class="card-gradient-border col-span-4 col-start-8">
+
+  <div class="lg:d-grid container relative">
+    <div class="card-gradient-border card-gradient-border--emergency">
       <div class="card-gradient-border__content">
         <h3>Vous êtes victime d’un piratage informatique&nbsp;?</h3>
         <div class="deco-gradient"></div>
@@ -23,7 +24,7 @@
         <a href="/" class="btn">Appel d’urgence 0000 00 00 00</a>
       </div>
     </div>
-  </article>
+  </div>
 
   <section>
     <div class="lg:d-grid container">
