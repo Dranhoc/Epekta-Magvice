@@ -1,7 +1,3 @@
-/**
- * Initializes the footer by setting up scroll to top, checking for prefooter, 
- * and scroll to prefooter functionality.
- */
 export function footerInit() {
   footerScrollUp();
   checkPrefooter();
@@ -33,14 +29,14 @@ function scrollToPrefooter() {
 
   if (!links) return;
 
-  links.forEach(link => {
+  links.forEach((link) => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const prefooter = document.getElementById('prefooter');
       if (!prefooter) return;
-  
+
       const y = prefooter.getBoundingClientRect().top + window.pageYOffset - 120;
-  
+
       window.scrollTo({
         top: y,
         behavior: 'smooth'
@@ -48,4 +44,3 @@ function scrollToPrefooter() {
     });
   });
 }
-

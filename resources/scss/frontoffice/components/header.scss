@@ -191,45 +191,8 @@
     }
   }
 
-  &__infos {
-    display: none;
-
-    @screen lg {
-      @apply flex justify-center items-center;
-    }
-
-    .connect {
-      position: relative;
-      display: flex;
-      white-space: nowrap;
-      gap: 10px;
-      align-items: center;
-      color: #fff !important;
-    }
-
-    .subnav {
-      @include subNavDesktop;
-      padding-left: 0 !important;
-
-      a:hover, button:hover {
-        @apply text-primary;
-      }
-    }
-  }
-
   p {
     margin-bottom: 0;
-  }
-
-  &__cta {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 40px;
-    padding: 30px 60px;
-    @apply bg-grey text-white;
   }
 }
 
