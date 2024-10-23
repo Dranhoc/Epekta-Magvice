@@ -15,20 +15,6 @@
         <span></span>
       </button>
     </div>
-
-    <div class="g-header__infos">
-      <div class="g-header__cta">
-        <div class="submenu">
-          <button class="connect">@svg('frontoffice/lock', 'icon-lock') connexion</button>
-          <div class="subnav">
-            <nav>
-              <button class="btn-login" data-modal-btn="modal-login">Se connecter</button>
-              <a href="/creer-un-compte">S'inscrire</a>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   @include('partials._header-menu', ['mobile' => true])
