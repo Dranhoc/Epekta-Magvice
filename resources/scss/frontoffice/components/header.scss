@@ -8,7 +8,8 @@
 
   nav {
     padding: 20px;
-    @apply bg-grey text-white;
+    border-radius: 20px;
+    @apply bg-white text-primary;
 
     a {
       &:before {
@@ -19,11 +20,14 @@
 }
 
 .g-header {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  right: 0px;
+  margin-inline: auto;
   width: 100%;
-  @apply bg-white;
-  box-shadow: 0px 10px 25px -10px rgba(0, 0, 0, 0.23);
+  max-width: 1440px;
+  @apply bg-white  rounded-10 shadow-xl;
   z-index: 100;
 
   .container {
@@ -55,7 +59,7 @@
         display: grid !important;
         grid-template-columns: repeat(12, minmax(0, 1fr));
         align-items: start;
-        
+
         > * {
           @apply col-span-3;
         }
@@ -75,7 +79,8 @@
       margin-bottom: 30px;
     }
 
-    a:not(.btn), button {
+    a:not(.btn),
+    button {
       @apply font-semibold text-grey hover:text-primary;
     }
 
@@ -110,6 +115,7 @@
   &__nav {
     position: relative;
     display: none;
+    width: 100%;
 
     @screen lg {
       display: flex;
@@ -148,7 +154,7 @@
           width: 12px;
           height: 7px;
           margin-left: 10px;
-          background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23BCB08F"/></svg>')
+          background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23C11794"/></svg>')
             no-repeat;
         }
       }
@@ -161,7 +167,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-    
+
         a {
           display: block;
 
@@ -179,7 +185,7 @@
     &:hover {
       button:not(.btn-login) {
         @apply text-primary;
-        
+
         &:after {
           transform: rotate(180deg);
         }

@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap");
 
 @layer base {
+  :root {
+    --header-height: 80px;
+    --gradient: linear-gradient(90deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
+    --gradient-reverse: linear-gradient(-90deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -9,46 +15,75 @@
     position: relative;
     width: 100vw;
     overflow-x: hidden;
-    @apply font-sans text-16 text-black;
-    line-height: 1.25;
+    @apply font-poppins text-16 text-primary;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, .title-1 {
-    @apply text-30 md:text-40 lg:text-50 font-bold mb-20;
-  }
-  
-  h2, .title-2 {
-    @apply text-25 md:text-30 lg:text-40 font-bold mb-20;
-  }
-  
-  h3, .title-3 {
-    @apply text-25 lg:text-30 font-bold mb-20;
+  h1,
+  .title-1 {
+    line-height: 1.28;
+    @screen md {
+      line-height: 1.2;
+    }
+    @apply text-35 md:text-50 lg:text-50 font-semibold mb-20;
   }
 
-  h4, .title-4 {
-    @apply text-20 lg:text-25 font-bold mb-20;
+  h2,
+  .title-2 {
+    line-height: 1.28;
+    @screen md {
+      line-height: 1.22;
+    }
+    @apply text-35 md:text-45 lg:text-45 font-medium mb-20;
   }
 
-  h5, .title-5 {
-    @apply text-25 font-normal mb-20;
+  h3,
+  .title-3 {
+    line-height: 1.2;
+    @apply text-35 lg:text-35 font-semibold mb-20;
   }
 
-  h6, .title-6 {
-    @apply text-20 font-bold mb-20;
+  h4,
+  .title-4 {
+    line-height: 1.34;
+    @apply text-[26px] font-bold mb-20;
   }
 
-  .title-sm {
-    @apply text-18 font-bold mb-20;
+  h5,
+  .title-5 {
+    line-height: 1.27;
+    @apply text-22 font-light mb-20 tracking-[2.2px];
+  }
+
+  h6,
+  .title-6 {
+    line-height: 1.3;
+    @apply text-20 font-semibold mb-20;
   }
 
   .title-secondary {
-    @apply block uppercase text-primary font-normal mb-20;
+    //tab header
+    line-height: 1.46;
+    @apply font-roboto text-[15px] font-medium;
   }
 
   p {
-    @apply mb-20;
+    @apply font-normal mb-20;
+  }
+
+  .text-footer {
+    @apply text-[12px] mb-20;
+  }
+
+  .text-ul {
+    padding-left: 20px;
+
+    li {
+      list-style-type: disc;
+      line-height: 1.375;
+    }
   }
 
   .btn {
@@ -57,21 +92,71 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 20px 40px;
-    @apply bg-primary text-white font-bold;
+    padding: 14px 20px;
+    line-height: 1.41;
+    @apply bg-magenta text-white text-[17px] font-medium;
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
+    transition: all 0.3s ease;
 
     @screen lg {
       text-align: left;
     }
 
-    &:hover, &:focus {
-      @apply bg-secondary text-white;
+    &:hover,
+    &:focus {
+      background-image: var(--gradient);
+      @apply text-white;
 
-      svg path {
-        @apply stroke-white;
+      // svg path {
+      //   @apply stroke-white;
+      // }
+    }
+
+    &--secondary {
+      @apply bg-white text-primary;
+
+      &:hover,
+      &:focus {
+        background-image: none;
+        @apply text-primary;
+        &:before {
+          // background-image: var(--gradient-reverse);
+          transform: rotateY(180deg);
+        }
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        border: 4px solid transparent;
+        background-image: var(--gradient);
+        mask:
+          linear-gradient(#fff 0 0) padding-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask:
+          linear-gradient(#fff 0 0) padding-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        background-size: calc(100% + 20px);
+        background-position: -10px;
+        transition: transform 0.8s ease;
+      }
+    }
+
+    &--hero {
+      @apply bg-transparent text-white;
+
+      &:hover,
+      &:focus {
+        @apply text-white;
       }
     }
   }
@@ -94,25 +179,28 @@
     border-collapse: collapse;
     @apply border border-primary;
 
-    thead, tfoot {
+    thead,
+    tfoot {
       @apply bg-primary text-white;
 
-      th, td {
+      th,
+      td {
         border-left: 0;
         @apply font-normal text-left;
       }
     }
-    
+
     tr {
       border-bottom: 1px solid #ccc;
     }
 
-    th, td {
+    th,
+    td {
       @apply p-15 border-l border-primary;
     }
   }
 }
 
-:root {
-  --header-height: 80px;
+nav > a {
+  @apply title-secondary;
 }

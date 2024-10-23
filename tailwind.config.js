@@ -41,8 +41,16 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      primary: '#BCB08F',
-      secondary: 'red',
+      primary: '#061043',
+      secondary: '#061043',
+      magenta: '#C11794',
+      purple:'#854df1',
+      bluelight: '#16D0FB',
+      custom: 
+        { grey:'#F2F2F2',
+          green:'',
+          yellow:'',
+        },
       black: '#000',
       white: '#fff',
       grey: '#555557',
@@ -85,7 +93,8 @@ module.exports = {
       'surface-950': 'rgb(var(--surface-950))',
     },
     fontFamily: {
-      sans: ['Sen', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif'],
     },
     fontSize: {
       '100': '100px',

@@ -1,6 +1,6 @@
 <header class="g-header">
   <div class="container">
-    <div class="flex justify-between xl:justify-start items-center w-full py-20">
+    <div class="flex w-full items-center justify-between py-[14px] xl:justify-start">
       <a href="/">
         <figure class="g-header__logo">
           @svg('logo', 'logo')
@@ -20,8 +20,9 @@
   @include('partials._header-menu', ['mobile' => true])
 </header>
 
+
 {{-- Modal login --}}
-<div class="modal modal-login" data-modal="modal-login">
+{{-- <div class="modal modal-login" data-modal="modal-login">
   <div class="modal__inner">
     <button class="modal__close" data-modal-btn="modal-login">
     @svg('frontoffice/icons/icon-close', 'icon')
@@ -53,4 +54,4 @@
       </div>
     </form>
   </div>
-</div>
+</div> --}}
