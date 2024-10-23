@@ -5,7 +5,7 @@
       <img src="{{ asset('/images/header-bg.jpg') }}" alt="Background of a nature scene">
     </figure>
     <div class="s-hero__content lg:d-grid container">
-      <div class="col-span-6">
+      <div class="lg:col-span-8 xl:col-span-7 2xl:col-span-6">
         <h5>En tant que manager ou chef d’entreprise</h5>
         <h1>Sécurisez vos données et optimiser l’efficacité de vos collaborateurs</h1>
         <h6>Magvice est votre partenaire IT, expert belge en solutions de parcs informatiques, en gestion de réseaux et en
