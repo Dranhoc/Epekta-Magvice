@@ -1,0 +1,50 @@
+.g-footer {
+  @apply bg-grey text-white py-40 overflow-hidden;
+  padding-top: 200px;
+
+  .logo * {
+    fill: #fff;
+  }
+
+  .icon-social {
+    height: 24px;
+    width: auto;
+  }
+
+  .list-icons-social a {
+    position: relative;
+
+    &:hover {
+      svg {
+        path {
+          @apply fill-primary;
+        }
+
+        &.icon-ig path {
+          @apply fill-transparent stroke-primary;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    &:hover {
+      @apply text-primary;
+    }
+  }
+
+  &__arrow {
+    display: block;
+    cursor: pointer;
+
+    &:hover {
+      svg path {
+        @apply stroke-primary;
+      }
+    }
+  }
+}

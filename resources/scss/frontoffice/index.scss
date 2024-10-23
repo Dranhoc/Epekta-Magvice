@@ -1,0 +1,25 @@
+@import "vendor";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import 'utils/typography';
+@import 'utils/misc';
+@import 'utils/scroll';
+@import 'utils/anims';
+@import 'utils/grid';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/accordion';
+@import 'components/modal';
+@import 'components/card';
+@import 'components/badge';
+@import 'components/swiper';
+
+@import 'pages/global';
+@import 'pages/_homepage';
+@import 'pages/_about';

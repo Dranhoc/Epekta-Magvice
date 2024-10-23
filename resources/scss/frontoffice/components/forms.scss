@@ -1,0 +1,90 @@
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="password"],
+.input-file__label,
+textarea,
+select {
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 30px;
+  @apply px-30 py-20;
+
+  &.bg-white {
+    background: #fff;
+  }
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  background: #fff;
+  border: 1px solid #fff;
+  appearance: none;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  &.has-border {
+    @apply border border-grey;
+  }
+
+  &:checked:before {
+    position: absolute;
+    content: "";
+    left: calc(50% - 4px);
+    top: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    @apply bg-primary;
+  }
+}
+
+input[type="radio"] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  background: #fff;
+  border-radius: 50%;
+  appearance: none;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  &:checked:before {
+    position: absolute;
+    content: "";
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    @apply bg-primary;
+  }
+}
+
+.select {
+  position: relative;
+  
+  select {
+    appearance: none;
+  }
+
+  &:after {
+    content: ">";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: inline-block;
+    transition: transform 0.32s;
+    transform: translateY(-16px);
+    @apply ease-smooth text-25 text-primary;
+  }
+
+  &:hover {
+    &:after {
+      transform: translateY(-18px) rotate(90deg);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "vue",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "warning", {
+        "useTabs": true,
+        "tabWidth": 1
+      }
+    ],
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

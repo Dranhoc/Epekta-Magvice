@@ -1,0 +1,28 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+
+            $table->json('name')->nullable();
+            $table->json('slug')->nullable();
+            $table->unsignedInteger('order_column')->default(0)->index();
+            $table->bigInteger('category_id')->unsigned()->index()->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('categories');
+    }
+};

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variables.scss";
+
+@import 'primeicons/primeicons.css';
+
+@import "menu.scss";
+@import "header.scss";
+@import "main.scss";
+
+body {
+    font-family: var(--font-family);
+}

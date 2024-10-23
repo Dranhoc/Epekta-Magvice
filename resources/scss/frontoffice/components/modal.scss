@@ -1,0 +1,88 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  @apply bg-grey bg-opacity-80 p-35 d-grid;
+  z-index: 999;
+  display: none;
+
+  &.is-active {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner {
+    position: relative;
+    @apply col-span-12 xl:col-span-4 xl:col-start-5 p-40 pt-80;
+    max-height: 100%;
+    background: #fff;
+    overflow-y: auto;
+    border-radius: 20px;
+
+    @screen lg {
+      height: auto;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+
+    @screen lg {
+      right: 75px;
+      top: 55px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    >* {
+      width: 100%;
+      margin-bottom: 10px;
+      
+      @screen md {
+        width: calc((100% - 20px) / 2);
+      }
+
+      @screen lg {
+        width: calc((100% - 60px) / 4);
+      }
+
+      &.big {
+        width: 100%;
+        
+        @screen lg {
+          width: calc((100% - 40px) / 2 + 10px);
+        }
+      }
+
+      &.full {
+        width: 100%;
+      }
+    }
+
+    label {
+      @apply text-18 font-bold;
+      display: block;
+      padding-bottom: 15px;
+      padding-left: 20px;
+    }
+
+    input[type="radio"] {
+      border: 1px solid;
+      @apply border-primary;
+
+      &+ label {
+        padding: 0;
+      }
+    }
+  }
+}

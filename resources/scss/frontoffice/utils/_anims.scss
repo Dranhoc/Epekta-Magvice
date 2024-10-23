@@ -1,0 +1,92 @@
+[data-anim="zoom-in"] {
+  opacity: 0;
+  transform: scale(1.2);
+  transform-origin: 50% 50%;
+
+  &.is-inview {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.68s, transform 0.68s;
+    @apply ease-smooth;
+  }
+}
+
+[data-anim="slide-up"] {
+  opacity: 0;
+  transform: translateY(60px);
+  transform-origin: 50% 50%;
+
+  &.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.68s, transform 0.68s;
+    @apply ease-smooth;
+  }
+}
+
+[data-anim="text-up"] {
+  opacity: 0;
+  transform: translateY(60px);
+  transform-origin: 50% 50%;
+
+  &.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.68s, transform 0.68s;
+    @apply ease-smooth;
+  }
+}
+
+[data-anim="text"] {
+  position: relative;
+
+  >span {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    >span {
+      position: relative;
+      display: inline-block;
+      transform: translateY(110%);
+      will-change: transform;
+      line-height: 1.2;
+    }
+  }
+
+  &.is-inview {
+    >span {
+      & > span {
+        transform: translateY(0);
+        transition: transform 0.54s;
+        @apply ease-smooth;
+      }
+
+      @for $i from 1 through 6 {
+        &:nth-of-type(#{$i}) > span {
+          transition-duration: 0.54s + $i * 0.5s;
+        }
+      }
+    }
+  }
+}
+
+[data-anim="img"] {
+  position: relative;
+  overflow: hidden;
+
+  > * {
+    position: relative;
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: scale(1.6);
+    transition: clip-path 1.2s, transform 1.2s;
+    @apply ease-smooth;
+    transition-delay: inherit;
+  }
+
+  &.is-inview > * {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,43 @@
+.accordion {
+  &__button {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 22px;
+    @apply gap-5 lg:gap-0 font-bold py-20 lg:pr-20 border-b-2 border-primary;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: auto;
+      flex-shrink: 0;
+      transition: transform 0.32s;
+      @apply ease-smooth;
+    }
+
+    &[aria-expanded="true"] {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &:focus {
+      box-shadow: inset  0px 0px 2px 2px #719ECE;
+      outline: 0;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.12s linear;
+		will-change: height;
+  }
+
+  &__inner {
+    @apply py-40;
+  }
+}

@@ -1,0 +1,281 @@
+@mixin subNavDesktop {
+  position: absolute;
+  top: 100%;
+  padding-top: 31px;
+  left: -20px;
+  display: none;
+  padding-left: 0;
+
+  nav {
+    padding: 20px;
+    @apply bg-grey text-white;
+
+    a {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.g-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  @apply bg-white;
+  box-shadow: 0px 10px 25px -10px rgba(0, 0, 0, 0.23);
+  z-index: 100;
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    z-index: 2;
+  }
+
+  &__logo {
+    @apply mr-70 lg:mr-40;
+  }
+
+  &__nav-mobile {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    height: calc(100vh - var(--header-height));
+    width: 100vw;
+    display: none;
+    @apply p-35 bg-white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @screen xl {
+      body.menu-open & {
+        display: grid !important;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        align-items: start;
+        
+        > * {
+          @apply col-span-3;
+        }
+      }
+    }
+
+    body.menu-open & {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    > a,
+    .submenu {
+      position: relative;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    a:not(.btn), button {
+      @apply font-semibold text-grey hover:text-primary;
+    }
+
+    .btn {
+      display: inline-block;
+    }
+
+    .submenu a {
+      position: relative;
+      padding-left: 18px;
+      line-height: 1.4;
+
+      &:before {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        left: 0;
+        top: 5px;
+        width: 12px;
+        height: 7px;
+        background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23BCB08F"/></svg>')
+          no-repeat;
+        transform: rotate(-90deg);
+      }
+    }
+
+    @screen lg {
+      display: none;
+    }
+  }
+
+  &__nav {
+    position: relative;
+    display: none;
+
+    @screen lg {
+      display: flex;
+      align-items: center;
+    }
+
+    a,
+    button {
+      display: inline-block;
+      margin-right: 30px;
+      white-space: nowrap;
+
+      &:hover {
+        @apply text-primary;
+      }
+    }
+  }
+
+  .submenu {
+    position: relative;
+
+    button:not(.btn-login) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      @apply font-semibold lg:font-normal;
+
+      &:not(.connect) {
+        @apply mb-20 lg:mb-0;
+      }
+
+      @screen lg {
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 7px;
+          margin-left: 10px;
+          background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23BCB08F"/></svg>')
+            no-repeat;
+        }
+      }
+    }
+
+    .subnav {
+      padding-left: 40px;
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+        a {
+          display: block;
+
+          @screen lg {
+            white-space: nowrap;
+          }
+        }
+      }
+
+      @screen lg {
+        @include subNavDesktop;
+      }
+    }
+
+    &:hover {
+      button:not(.btn-login) {
+        @apply text-primary;
+        
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+
+      .subnav {
+        display: block;
+      }
+    }
+  }
+
+  &__infos {
+    display: none;
+
+    @screen lg {
+      @apply flex justify-center items-center;
+    }
+
+    .connect {
+      position: relative;
+      display: flex;
+      white-space: nowrap;
+      gap: 10px;
+      align-items: center;
+      color: #fff !important;
+    }
+
+    .subnav {
+      @include subNavDesktop;
+      padding-left: 0 !important;
+
+      a:hover, button:hover {
+        @apply text-primary;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &__cta {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    padding: 30px 60px;
+    @apply bg-grey text-white;
+  }
+}
+
+.menu-burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @screen lg {
+    display: none;
+  }
+
+  span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-top: 2px solid #707070;
+    transition: all 0.12s linear;
+
+    &:last-child {
+      width: 20px;
+    }
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+
+  .menu-burger span {
+    &:first-child {
+      transform-origin: 50% 50%;
+      transform: rotate(45deg) translateY(10px) translateX(10px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      transform-origin: 50% 50%;
+      transform: rotate(-45deg) translateY(-10px) translateX(10px);
+      width: 100%;
+    }
+  }
+}

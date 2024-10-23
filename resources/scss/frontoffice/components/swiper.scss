@@ -1,0 +1,46 @@
+.slider-cards {
+  &--container {
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+.swiper-button {
+  @apply bg-primary;
+  width: 40px !important;
+  height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50%;
+
+  &:after {
+    color: #fff;
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+
+  &-cards {
+    &.swiper-button-prev {
+      left: -20px;
+
+      @screen xl {
+        left: -60px;
+      }
+    }
+
+    &.swiper-button-next {
+      right: -20px;
+
+      @screen xl {
+        right: -60px;
+      }
+    }
+  }
+}
+
+.swiper-button.swiper-button-lock {
+  display: none !important;
+}
