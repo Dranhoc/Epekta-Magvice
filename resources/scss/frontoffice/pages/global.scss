@@ -11,13 +11,13 @@ footer {
     position: relative;
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
 }
 
 section {
   position: relative;
-  @apply py-60;
+  @apply py-120;
 
   // &:first-of-type {
   //   margin-top: var(--header-height);
@@ -68,7 +68,8 @@ section {
 
   &__content {
     position: relative;
-    padding-block: 125px;
+    padding-top: 180px;
+    padding-bottom: 200px;
   }
 }
 
@@ -123,13 +124,18 @@ section {
   &--emergency {
     position: relative;
     width: 100vw;
+    margin: -40px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
 
     z-index: 2;
-    @screen md {
+    @screen lg {
       position: absolute;
       top: -270px;
-      right: 8%;
+      right: 3%;
       max-width: 550px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
     }
   }
 }

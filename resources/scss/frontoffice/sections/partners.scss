@@ -1,0 +1,22 @@
+.s-partners {
+  &__visual {
+    display: flex;
+    min-width: 60px;
+    max-width: 150px;
+    height: 110px;
+    @screen sm {
+      height: 150px;
+    }
+    img {
+      margin-block: 15px;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .swiper-pagination {
+    text-align: right;
+    --swiper-pagination-bullet-inactive-color: white;
+    --swiper-pagination-color: #16cffb;
+  }
+}

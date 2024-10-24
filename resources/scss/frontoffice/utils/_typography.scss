@@ -63,6 +63,11 @@
     @apply text-20 font-semibold mb-20;
   }
 
+  .title-7 {
+    line-height: 1.41;
+    @apply text-[17px] font-medium;
+  }
+
   .title-secondary {
     //tab header
     line-height: 1.46;

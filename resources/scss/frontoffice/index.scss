@@ -4,20 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "utils/typography";
+@import "utils/misc";
+@import "utils/anims";
 
-@import 'utils/typography';
-@import 'utils/misc';
-@import 'utils/anims';
+@import "components/header";
+@import "components/footer";
+@import "components/forms";
+@import "components/accordion";
+@import "components/modal";
+@import "components/card";
+@import "components/badge";
+@import "components/swiper";
 
-@import 'components/header';
-@import 'components/footer';
-@import 'components/forms';
-@import 'components/accordion';
-@import 'components/modal';
-@import 'components/card';
-@import 'components/badge';
-@import 'components/swiper';
+@import "pages/global";
+@import "pages/_homepage";
+@import "pages/_about";
 
-@import 'pages/global';
-@import 'pages/_homepage';
-@import 'pages/_about';
+@import "sections/partners";

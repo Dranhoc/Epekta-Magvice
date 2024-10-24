@@ -26,4 +26,24 @@ export function initSlidersHome() {
       prevEl: '.swiper-button-cards.swiper-button-prev'
     }
   });
+
+  //section partners
+  new Swiper('.swiper-logos', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 2,
+    breakpoints: {
+      460: {
+        slidesPerView: 3
+      },
+      1280: {
+        slidesPerView: 4
+      }
+    },
+    spaceBetween: 30,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
 }
