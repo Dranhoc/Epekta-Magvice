@@ -163,7 +163,8 @@
 
       <div class="col-span-6">
 
-        <p class="mb-80 mt-40 lg:my-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+        <p class="title-7 mb-80 mt-40 lg:my-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim
           in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
           libero vitae erat.</p>
 
@@ -235,66 +236,73 @@
   </section>
 
 
-  {{-- <section>
+  <section class="s-prices">
     <div class="lg:d-grid container">
-      <div class="col-span-12">
-        <h2 class="mb-30 text-center">Liste de cartes dans un slider</h2>
+
+      <div class="col-span-12 xl:col-span-10 xl:col-start-2">
+        <h5>Des prix abordables et sur-mesure</h5>
+        <h2>Packs tarifaires</h2>
+        <div class="deco-gradient"></div>
+        <p class="title-7 mb-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, rerum doloremque.
+          Explicabo placeat veniam libero voluptas aliquid distinctio animi recusandae.</p>
+
+        <h4>Service + gérance</h4>
+        <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+          elementum tristique.
+        </p>
+        <h4>Service sans gérance</h4>
+        <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+          elementum tristique.
+        </p>
+        <h4>Service mi-géré</h4>
+        <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+          elementum tristique.
+        </p>
       </div>
 
-      <div class="col-span-10 col-start-2">
-        <div class="swiper slider-cards">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">@include('components.card', ['new' => false, 'option' => false])</div>
-            <div class="swiper-slide">@include('components.card', ['new' => false, 'option' => true])</div>
-            <div class="swiper-slide">@include('components.card', ['new' => true, 'option' => false])</div>
-            <div class="swiper-slide">@include('components.card', ['new' => false, 'option' => false])</div>
-            @if ($page === 'home')
-              <div class="swiper-slide">@include('components.card', ['new' => false, 'option' => false])</div>
-              <div class="swiper-slide">@include('components.card', ['new' => false, 'option' => false])</div>
-            @endif
-          </div>
-        </div>
-        <div class="swiper-button swiper-button-prev swiper-button-cards"></div>
-        <div class="swiper-button swiper-button-next swiper-button-cards"></div>
-      </div>
     </div>
   </section>
 
-  <section>
+  <section class="py-0">
     <div class="lg:d-grid container">
-      <h2 class="col-span-12 text-center">Tableau</h2>
-      <table class="col-span-8 col-start-3">
-        <thead>
-          <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Row 1, Col 1</td>
-            <td>Row 1, Col 2</td>
-            <td>Row 1, Col 3</td>
-          </tr>
-          <tr>
-            <td>Row 2, Col 1</td>
-            <td>Row 2, Col 2</td>
-            <td>Row 2, Col 3</td>
-          </tr>
-          <tr>
-            <td>Row 3, Col 1</td>
-            <td>Row 3, Col 2</td>
-            <td>Row 3, Col 3</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3">Footer</td>
-          </tr>
-        </tfoot>
-      </table>
+
+      <div class="card-gradient-border card-gradient-border--emergency full-w-mobile !-top-[450px]">
+        <div class="card-gradient-border__content">
+
+          <div class="flex flex-col justify-between gap-x-50 gap-y-20 sm:flex-row lg:items-center">
+            <div>
+              <h4 class="mb-10 font-semibold">Basic plan</h4>
+              <p class="mb-0">Lorem ipsum dolor.</p>
+            </div>
+            <p class="mb-0 text-[57px] font-bold text-primary">€149<span class="text-30">/mois</span></p>
+          </div>
+
+          <div class="deco-grey"></div>
+
+          <p>Includes:</p>
+          <ul class="text-ul flex flex-col justify-between gap-x-40 gap-y-0 sm:flex-row">
+            <div>
+              <li>Feature text goes here</li>
+              <li>Feature text goes here</li>
+              <li>Feature text goes here</li>
+              <li>Feature text goes here</li>
+              <li>Feature text goes here</li>
+            </div>
+
+            <div>
+              <li>Feature text goes here</li>
+              <li>Feature text goes here</li>
+              <li>Feature text goes here</li>
+              <li>Feature text goes here</li>
+            </div>
+          </ul>
+
+          <div class="deco-grey"></div>
+
+          <a href="/" class="btn mb-40 w-full">Je suis intéressé(e)</a>
+        </div>
+      </div>
 
     </div>
-  </section> --}}
+  </section>
 @endsection

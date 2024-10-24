@@ -144,6 +144,13 @@ section {
   background: var(--gradient);
   margin-block: 25px;
 }
+.deco-grey {
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  margin-block: 32px;
+  @apply bg-custom-grey;
+}
 
 .full-w-mobile {
   @media (max-width: 1023px) {
