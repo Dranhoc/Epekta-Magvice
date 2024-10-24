@@ -5,7 +5,7 @@ main {
 header,
 section,
 footer {
-  @apply px-40;
+  @apply px-20 sm:px-40;
 
   .container {
     position: relative;
@@ -123,19 +123,16 @@ section {
 
   &--emergency {
     position: relative;
-    width: 100vw;
-    margin: -40px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
-
     z-index: 2;
+
     @screen lg {
       position: absolute;
       top: -270px;
       right: 3%;
       max-width: 550px;
-      border-top-right-radius: 20px;
-      border-top-left-radius: 20px;
+      border-radius: 20px;
     }
   }
 }
@@ -146,4 +143,11 @@ section {
   border-radius: 5px;
   background: var(--gradient);
   margin-block: 25px;
+}
+
+.full-w-mobile {
+  @media (max-width: 1023px) {
+    width: 100vw;
+  }
+  @apply -m-20 sm:-m-40;
 }
