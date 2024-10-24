@@ -269,7 +269,7 @@
     <div class="lg:d-grid container">
 
       <div class="card-gradient-border card-gradient-border--emergency full-w-mobile !-top-[450px]">
-        <div class="card-gradient-border__content">
+        <div class="card-gradient-border__content !px-20">
 
           <div class="flex flex-col justify-between gap-x-50 gap-y-20 sm:flex-row lg:items-center">
             <div>
@@ -282,20 +282,20 @@
           <div class="deco-grey"></div>
 
           <p>Includes:</p>
-          <ul class="text-ul flex flex-col justify-between gap-x-40 gap-y-0 sm:flex-row">
-            <div>
-              <li>Feature text goes here</li>
-              <li>Feature text goes here</li>
-              <li>Feature text goes here</li>
-              <li>Feature text goes here</li>
-              <li>Feature text goes here</li>
+          <ul class="text-ul flex flex-col justify-between gap-x-30 gap-y-0 sm:flex-row">
+            <div class="w-1/2">
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here </li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
             </div>
 
-            <div>
-              <li>Feature text goes here</li>
-              <li>Feature text goes here</li>
-              <li>Feature text goes here</li>
-              <li>Feature text goes here</li>
+            <div class="w-1/2">
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
             </div>
           </ul>
 
@@ -308,6 +308,7 @@
     </div>
   </section>
 
+
   <section class="s-slider pt-[240px]">
     <div class="lg:d-grid container">
 
@@ -317,19 +318,25 @@
 
     </div>
   </section>
+
+
   <section class="testimonies">
 
   </section>
+
+
   <section class="s-dyk">
 
   </section>
+
+
   <section class="s-newsletter">
     <div class="lg:d-grid container">
       <div class="col-span-6 col-start-4 text-center">
         <h3 class="mb-25">Inscrivez-vous à la newsletter</h3>
-        <p class="title-7 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-          eros
-          elementum tristique.</p>
+        <p class="title-7 text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+        </p>
         <form action="">
           <div class="mt-40 flex flex-wrap items-center justify-center gap-20">
             <input class="max-w-[400px] !rounded-10 !p-[12px] !text-grey" type="email"
@@ -339,16 +346,20 @@
       </div>
       <div class="col-span-4 col-start-5 mt-20 flex items-center gap-10">
         <input class="rounded-[5px] !border-2 !border-bluelight p-2" type="checkbox" name="privacy">
-        <label for="privacy">Vous acceptez notre <a href="/" class="underline">politique
-            de
-            confidentialité</a></label>
+        <label for="privacy">Vous acceptez notre
+          <a href="/" class="underline"> politique de confidentialité</a>
+        </label>
       </div>
       </form>
 
   </section>
+
+
   <section class="s-ask-question">
 
   </section>
+
+
   <section class="py-0">
     <div class="lg:d-grid container">
 

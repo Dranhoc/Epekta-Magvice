@@ -89,15 +89,16 @@
   }
 
   .text-ul {
-    padding-left: 20px;
-
     li {
-      list-style-type: disc;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
       line-height: 1.375;
+      list-style-type: none;
       @apply text-secondary mb-15;
     }
   }
-
   .btn {
     position: relative;
     display: inline-flex;
