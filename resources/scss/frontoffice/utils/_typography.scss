@@ -74,8 +74,14 @@
     @apply font-roboto text-[15px] font-medium;
   }
 
+  .scrolling-text {
+    line-height: 1;
+    -webkit-text-stroke: 2px #fff;
+    @apply text-50 lg:text-70 mb-0 text-center uppercase text-transparent;
+  }
+
   p {
-    @apply font-normal mb-20;
+    @apply text-secondary font-normal mb-20;
   }
 
   .text-footer {
@@ -88,6 +94,7 @@
     li {
       list-style-type: disc;
       line-height: 1.375;
+      @apply text-secondary;
     }
   }
 

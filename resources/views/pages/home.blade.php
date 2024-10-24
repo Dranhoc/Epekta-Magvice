@@ -38,7 +38,7 @@
   @include('sections.section-partners')
 
 
-  <section>
+  <section class="s-description">
     <div class="lg:d-grid container">
 
       <div class="col-span-8">
@@ -121,8 +121,8 @@
     <div class="container relative">
       <div class="s-hero--security__content scrolling-content">
         @for ($i = 0; $i < 20; $i++)
-          <h2>Service de protection</h2>
-          <h2>Cybersécurité</h2>
+          <h2 class="scrolling-text">Service de protection</h2>
+          <h2 class="scrolling-text">Cybersécurité</h2>
         @endfor
       </div>
     </div>
@@ -149,7 +149,7 @@
   </section>
 
 
-  <section class="s-values">
+  <section class="s-values pb-60 pt-180">
     <div class="lg:d-grid container">
 
       <div class="col-span-6">
@@ -170,20 +170,65 @@
         <div class="flex w-full flex-col gap-80 md:flex-row md:gap-40">
           <div class="md:w-1/2">
             <figure class="mb-20">@svg('frontoffice.pages.home.password')</figure>
-            <h4>Profitez des services gérés de Magvice</h4>
-            <p>Economiser de l’argent et du temps en fournissant à votre entreprise un environnement sûr pour héberger vos
-              services et applications.</p>
-            <button class="btn">En savoir plus sur Gaétan</button>
+            <h4>Une organisation sans faille et un process établi</h4>
+            <p class="mt-25">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+              elementum
+              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+            <button class="btn md:mt-80">En savoir plus sur Gaétan</button>
           </div>
           <div class="md:w-1/2">
             <figure class="mb-20">@svg('frontoffice.pages.home.light-alert')</figure>
-            <h4>Récupérez vos données après sinistre</h4>
-            <p>S’assurer, qu’en cas de catastrophe, d’être toujours en mesure de fonctionner correctement dans un minimum
-              de
-              temps prédéfini.</p>
+            <h4>Un suivi en toute transparence et modulable</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+              elementum
+              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
           </div>
         </div>
 
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="s-iframe py-0">
+    <div class="lg:d-grid container">
+
+      <div class="col-span-10 col-start-2">
+        <figure class="flex justify-center">
+          <iframe class="aspect-[150/73] w-full rounded-20 shadow-xl" src="https://www.youtube.com/embed/L8E7cZWBuq8"
+            title="Voici Le Plus Grand Data Center Au Monde" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-primary">
+    <div class="lg:d-grid container">
+
+      <div class="col-span-6 xl:col-span-5 xl:col-start-2">
+        <h3 class="text-white">Long heading is what you see here in this feature section</h3>
+        <div class="deco-gradient"></div>
+      </div>
+
+      <div class="col-span-12 mt-60 xl:col-span-10 xl:col-start-2">
+        <div class="key-numbers">
+          <div>
+            <h6>10<span>X</span></h6>
+            <p>Argumentaire 01</p>
+          </div>
+          <div class="key-numbers__big">
+            <h6>30<span>%</span></h6>
+            <p>Argumentaire 02</p>
+          </div>
+          <div>
+            <h6>79&nbsp;000</h6>
+            <p>Argumentaire 03</p>
+          </div>
+        </div>
       </div>
 
     </div>
