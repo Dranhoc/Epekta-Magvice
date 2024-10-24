@@ -248,15 +248,18 @@
           Explicabo placeat veniam libero voluptas aliquid distinctio animi recusandae.</p>
 
         <h4>Service + gérance</h4>
-        <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+        <p class="s-prices__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros
           elementum tristique.
         </p>
         <h4>Service sans gérance</h4>
-        <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+        <p class="s-prices__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros
           elementum tristique.
         </p>
         <h4>Service mi-géré</h4>
-        <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+        <p class="s-prices__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros
           elementum tristique.
         </p>
         <a href="/" class="btn btn--secondary mt-30">Voir tous les packs tarifaires</a>
@@ -268,7 +271,7 @@
   <section class="py-0">
     <div class="lg:d-grid container">
 
-      <div class="card-gradient-border card-gradient-border--emergency full-w-mobile !-top-[450px]">
+      <div class="card-gradient-border card-gradient-border--emergency full-w-mobile lg:!-top-[450px]">
         <div class="card-gradient-border__content !px-20">
 
           <div class="flex flex-col justify-between gap-x-50 gap-y-20 sm:flex-row lg:items-center">
@@ -282,7 +285,7 @@
           <div class="deco-grey"></div>
 
           <p>Includes:</p>
-          <ul class="text-ul flex flex-col justify-between gap-x-30 gap-y-0 sm:flex-row">
+          <ul class="text-ul flex flex-col justify-between gap-x-30 sm:flex-row">
             <div class="w-1/2">
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here </li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>

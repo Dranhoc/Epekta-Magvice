@@ -101,6 +101,15 @@
   }
 }
 
+.s-prices {
+  &__content {
+    @screen lg {
+      width: calc(50% - 50px);
+    }
+    @apply xl:w-1/2;
+  }
+}
+
 .s-newsletter {
   background: var(--gradient);
   @apply text-white;
