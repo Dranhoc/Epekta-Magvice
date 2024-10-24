@@ -100,3 +100,8 @@
     }
   }
 }
+
+.s-newsletter {
+  background: var(--gradient);
+  @apply text-white;
+}

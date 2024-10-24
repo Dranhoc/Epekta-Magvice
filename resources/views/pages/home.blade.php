@@ -5,16 +5,17 @@
     <figure class="s-hero__visual">
       <img src="{{ asset('/images/header-bg.jpg') }}" alt="Background of a nature scene">
     </figure>
+
     <div class="s-hero__content lg:d-grid container">
-      <div class="lg:col-span-8 xl:col-span-7 2xl:col-span-6">
+      <div class="col-start-2 lg:col-span-9 xl:col-span-7 xl:ml-80">
         <h5>En tant que manager ou chef d’entreprise</h5>
         <h1>Sécurisez vos données et optimiser l’efficacité de vos collaborateurs</h1>
-        <h6>Magvice est votre partenaire IT, expert belge en solutions de parcs informatiques, en gestion de réseaux et en
+        <h6 class="lg:w-[60%] xl:w-full">Magvice est votre partenaire IT, expert belge en solutions de parcs informatiques,
+          en gestion de réseaux et en
           cybersécrurité.</h6>
         <button class="btn btn--secondary btn--hero">Voir les images Magvice</button>
       </div>
     </div>
-    <div class="col-span-5"></div>
 
   </section>
 
@@ -258,6 +259,7 @@
         <p class="w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
           elementum tristique.
         </p>
+        <a href="/" class="btn btn--secondary mt-30">Voir tous les packs tarifaires</a>
       </div>
 
     </div>
@@ -300,6 +302,68 @@
           <div class="deco-grey"></div>
 
           <a href="/" class="btn mb-40 w-full">Je suis intéressé(e)</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="s-slider pt-[240px]">
+    <div class="lg:d-grid container">
+
+      <div class="xl-col-start-2 lg:col-span-12 xl:col-span-10">
+
+      </div>
+
+    </div>
+  </section>
+  <section class="testimonies">
+
+  </section>
+  <section class="s-dyk">
+
+  </section>
+  <section class="s-newsletter">
+    <div class="lg:d-grid container">
+      <div class="col-span-6 col-start-4 text-center">
+        <h3 class="mb-25">Inscrivez-vous à la newsletter</h3>
+        <p class="title-7 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+          eros
+          elementum tristique.</p>
+        <form action="">
+          <div class="mt-40 flex flex-wrap items-center justify-center gap-20">
+            <input class="max-w-[400px] !rounded-10 !p-[12px] !text-grey" type="email"
+              placeholder="Entrez votre e-mail">
+            <button class="btn">S'inscrire</button>
+          </div>
+      </div>
+      <div class="col-span-4 col-start-5 mt-20 flex items-center gap-10">
+        <input class="rounded-[5px] !border-2 !border-bluelight p-2" type="checkbox" name="privacy">
+        <label for="privacy">Vous acceptez notre <a href="/" class="underline">politique
+            de
+            confidentialité</a></label>
+      </div>
+      </form>
+
+  </section>
+  <section class="s-ask-question">
+
+  </section>
+  <section class="py-0">
+    <div class="lg:d-grid container">
+
+      <div class="card-gradient-border full-w-mobile col-span-10 col-start-2">
+        <div class="card-gradient-border__content !text-center">
+          <h5>Besoin d’y voir plus clair&nbsp;?</h5>
+          <h3>Vous avez des questions&nbsp;?</h3>
+          <div class="deco-gradient mx-auto"></div>
+          <p class="title-7">Toutes les questions ne resterons pas sans réponses. Nous reviendrons vers vous dans les
+            24h.
+          </p>
+          <div class="mb-20 mt-40 flex flex-wrap justify-center gap-20">
+            <a href="/" class="btn">Contactez-nous&nbsp;!</a>
+            <a href="/" class="btn btn--secondary">Voir toutes les FAQ</a>
+          </div>
         </div>
       </div>
 
