@@ -12,6 +12,9 @@ footer {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto !important;
+    @media (min-width: 2000px) {
+      max-width: 1920px;
+    }
   }
 }
 
@@ -130,7 +133,7 @@ section {
     @screen lg {
       position: absolute;
       top: -270px;
-      right: 3%;
+      right: 40px;
       max-width: 550px;
       border-radius: 20px;
     }

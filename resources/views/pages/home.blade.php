@@ -7,7 +7,7 @@
     </figure>
 
     <div class="s-hero__content lg:d-grid container">
-      <div class="col-start-2 lg:col-span-9 xl:col-span-7 xl:ml-80">
+      <div class="lg:col-span-9 xl:col-span-7 xl:col-start-2">
         <h5>En tant que manager ou chef d’entreprise</h5>
         <h1>Sécurisez vos données et optimiser l’efficacité de vos collaborateurs</h1>
         <h6 class="lg:w-[60%] xl:w-full">Magvice est votre partenaire IT, expert belge en solutions de parcs informatiques,
@@ -42,7 +42,7 @@
   <section class="s-description">
     <div class="lg:d-grid container">
 
-      <div class="col-span-8">
+      <div class="col-span-7 col-start-2">
         <h5>Nos services en cybersécurité</h5>
         <h2>De l’installation de parc informatique à une gérance partielle ou totale </h2>
         <div class="deco-gradient"></div>
@@ -51,11 +51,11 @@
           éviter une
           faillite éventuelle à votre entreprise !</p>
       </div>
-      <div class="col-span-2 col-start-10 my-40 lg:my-0">
+      <div class="col-span-2 col-start-9 my-40 lg:my-0">
         @svg('frontoffice.pages.home.logo')
       </div>
 
-      <div class="col-span-6 mt-80 lg:mt-60 lg:pr-20">
+      <div class="col-span-5 col-start-2 mt-80 lg:mt-60 lg:pr-20">
         <figure class="mb-20">@svg('frontoffice.pages.home.security')</figure>
         <h4>Assurez la conformité de sécurité de votre infrastructure</h4>
         <p>Le but est d’aider les entreprises à renforcer la sécurité de leurs datacenters (serveurs/données/applications,
@@ -66,7 +66,7 @@
         </div>
       </div>
 
-      <div class="col-span-6 mt-80 lg:mt-100">
+      <div class="col-span-5 mt-80 lg:mt-100">
         <figure class="mb-20">@svg('frontoffice.pages.home.user')</figure>
         <h4>Améliorez les compétences de votre équipe avec des solutions modernes et hybrides</h4>
         <p>Permettre aux collaborateurs de travailler de n’importe où à tout moment d’une manière sécurisée et optimisée.
@@ -77,34 +77,37 @@
         </div>
       </div>
 
-      <div class="col-span-12">
+      <div class="col-span-10 col-start-2">
         <figure class="my-80">
           <img class="max-h-[561px] w-full rounded-20 object-cover" src="{{ asset('/images/home/hero-worker.jpg') }}"
-            alt="Working man in a datacenter">
+            alt="Working man with a lot of cables">
         </figure>
       </div>
 
 
-      <div class="col-span-4 mt-80 lg:mt-0 lg:pr-40">
-        <figure class="mb-20">@svg('frontoffice.pages.home.password')</figure>
-        <h4>Profitez des services gérés de Magvice</h4>
-        <p>Economiser de l’argent et du temps en fournissant à votre entreprise un environnement sûr pour héberger vos
-          services et applications.</p>
-        <button class="btn">Voir les services gérés</button>
-      </div>
-      <div class="col-span-4 mt-80 lg:mt-0 lg:pr-40">
-        <figure class="mb-20">@svg('frontoffice.pages.home.web-security')</figure>
-        <h4>Mise en place du matériel et conception de réseaux</h4>
-        <p>Aider les entreprises à concevoir des réseaux WiFi optimaux, à construire de grands réseaux câblés, à façonner
-          leur datacenter et à fournir...</p>
-        <button class="btn">Voir le support matériel</button>
-      </div>
-      <div class="col-span-4 mt-80 lg:mt-0 lg:pr-40">
-        <figure class="mb-20">@svg('frontoffice.pages.home.light-alert')</figure>
-        <h4>Récupérez vos données après sinistre</h4>
-        <p>S’assurer, qu’en cas de catastrophe, d’être toujours en mesure de fonctionner correctement dans un minimum de
-          temps prédéfini.</p>
-        <button class="btn">Voir les garanties Magvice</button>
+      <div class="flex flex-col gap-80 lg:col-span-12 lg:flex-row xl:col-span-10 xl:col-start-2">
+        <div class="mt-80 w-1/3 lg:mt-0">
+          <figure class="mb-20">@svg('frontoffice.pages.home.password')</figure>
+          <h4>Profitez des services gérés de Magvice</h4>
+          <p>Economiser de l’argent et du temps en fournissant à votre entreprise un environnement sûr pour héberger vos
+            services et applications.</p>
+          <button class="btn">Voir les services gérés</button>
+        </div>
+        <div class="mt-80 w-1/3 lg:mt-0">
+          <figure class="mb-20">@svg('frontoffice.pages.home.web-security')</figure>
+          <h4>Mise en place du matériel et conception de réseaux</h4>
+          <p>Aider les entreprises à concevoir des réseaux WiFi optimaux, à construire de grands réseaux câblés, à
+            façonner
+            leur datacenter et à fournir...</p>
+          <button class="btn">Voir le support matériel</button>
+        </div>
+        <div class="mt-80 w-1/3 lg:mt-0">
+          <figure class="mb-20">@svg('frontoffice.pages.home.light-alert')</figure>
+          <h4>Récupérez vos données après sinistre</h4>
+          <p>S’assurer, qu’en cas de catastrophe, d’être toujours en mesure de fonctionner correctement dans un minimum de
+            temps prédéfini.</p>
+          <button class="btn">Voir les garanties Magvice</button>
+        </div>
       </div>
 
 
@@ -176,7 +179,7 @@
             <p class="mt-25">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
               elementum
               tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-            <button class="btn md:mt-80">En savoir plus sur Gaétan</button>
+            <button class="btn md:mt-40">En savoir plus sur Gaétan</button>
           </div>
           <div class="md:w-1/2">
             <figure class="mb-20">@svg('frontoffice.pages.home.light-alert')</figure>
@@ -323,8 +326,20 @@
   </section>
 
 
-  <section class="testimonies">
+  <section class="testimonies bg-custom-grey">
+    <div class="lg:d-grid container">
 
+      <div class="col-span-10 col-start-2 text-center">
+        <h5>De vrais témoignages avec de vrais enjeux</h5>
+        <h3>Ils témoignent de leur confiance</h3>
+        <div class="flex justify-center gap-5">
+          @for ($i = 0; $i < 5; $i++)
+            @svg('frontoffice.icons.star')
+          @endfor
+        </div>
+      </div>
+
+    </div>
   </section>
 
 
