@@ -134,7 +134,6 @@
     </div>
 
   </section>
-
   <div class="deco-ellipse deco-ellipse--bottom deco-ellipse--grey">@svg('frontoffice.deco-ellipse')</div>
 
 
@@ -142,7 +141,7 @@
     <div class="lg:d-grid container">
 
       <div class="card-gradient-border full-w-mobile col-span-10 col-start-2 lg:-my-70">
-        <div class="card-gradient-border__content !text-center">
+        <div class="card-gradient-border__content !text-center lg:p-60">
           <h5>Besoin d’y voir plus clair ?</h5>
           <h3>Profitez d’un diagnostic GRATUIT concernant la situation actuelle de votre structure</h3>
           <div class="deco-gradient mx-auto"></div>
@@ -157,7 +156,7 @@
   </section>
 
 
-  <section class="s-values pb-60 pt-180">
+  <section class="s-values lg:pb-60 lg:pt-180">
     <div class="lg:d-grid container">
 
       <div class="col-span-6">
@@ -294,7 +293,7 @@
 
           <p>Includes:</p>
           <ul class="text-ul flex flex-col justify-between gap-x-30 sm:flex-row">
-            <div class="w-1/2">
+            <div class="sm:w-1/2">
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
@@ -302,7 +301,7 @@
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
             </div>
 
-            <div class="w-1/2">
+            <div class="sm:w-1/2">
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
@@ -350,11 +349,11 @@
     </div>
   </section>
 
+
   <div class="deco-ellipse deco-ellipse--top">@svg('frontoffice.deco-ellipse')</div>
   <section class="s-testimonies bg-custom-grey">
     <div class="lg:d-grid container">
-
-      <div class="col-span-8 col-start-3 text-center">
+      <div class="col-span-10 col-start-2 text-center">
 
         <h5 class="mb-15">De vrais témoignages avec de vrais enjeux</h5>
         <h3>Ils témoignent de leur confiance</h3>
@@ -364,30 +363,53 @@
           @endfor
         </div>
 
-        <div class="mb-20 mt-40">
-          <h6 class="text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-            eros
-            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat."</h6>
-          <div class="flex h-60 items-center justify-center gap-x-20">
-            <figure><img src="{{ asset('/images/home/avatar1.png') }}" alt="avatar of Gaétan"></figure>
-            <div class="flex flex-col justify-center text-left">
-              <p class="title-7 mb-0">John Doe</p>
-              <p class="mb-0">Position, Company name</p>
-            </div>
-            <div class="separator-gradient"></div>
-            @svg('frontoffice.sections.partners.placeholder2')
+        <div class="swiper slider-testimonies">
+          <div class="swiper-wrapper">
+
+            @for ($i = 0; $i < 4; $i++)
+              <div class="swiper-slide">
+                <div class="px-40 lg:px-150">
+                  <h6 class="text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                    enim
+                    in
+                    eros
+                    elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+                    libero
+                    vitae erat."</h6>
+                  <div class="flex h-60 items-center justify-center gap-x-20">
+                    <figure><img src="{{ asset('/images/home/avatar1.png') }}" alt="avatar of Gaétan"></figure>
+                    <div class="flex flex-col justify-center text-left">
+                      <p class="title-7 mb-0">John Doe</p>
+                      <p class="mb-0">Position, Company name</p>
+                    </div>
+                    <div class="separator-gradient"></div>
+                    @svg('frontoffice.sections.partners.placeholder2')
+                  </div>
+                </div>
+              </div>
+            @endfor
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button swiper-button-prev swiper-button-testimonies">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="#C11794" />
+            </svg>
+          </div>
+          <div class="swiper-button swiper-button-next swiper-button-testimonies">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#C11794" />
+            </svg>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-dyk">
+  <section class="s-dyk py-30 lg:py-90">
     <div class="lg:d-grid container">
 
       <div class="col-span-6">
@@ -459,7 +481,7 @@
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-ask-question">
+  <section class="s-ask-question pb-80">
     <div class="lg:d-grid container">
 
       <div class="col-span-7 lg:w-[88%]">
@@ -492,14 +514,14 @@
 
       </div>
 
-      <figure class="col-span-5 mt-40 flex h-full items-center justify-center lg:mt-0">
+      <figure class="s-ask-question__visual col-span-5">
         <img src="{{ asset('/images/home/big-gaetan.png') }}" alt="Big picture of Gaétan">
       </figure>
     </div>
   </section>
 
 
-  <section class="py-0">
+  <section class="py-0 lg:-mb-[141px]">
     <div class="lg:d-grid container">
 
       <div class="card-gradient-border full-w-mobile col-span-10 col-start-2">

@@ -8,18 +8,20 @@
 }
 
 .swiper-button {
-  @apply bg-primary;
-  width: 40px !important;
-  height: 40px !important;
+  @apply bg-white;
+  width: 48px !important;
+  height: 48px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 50%;
+  padding: 12px;
 
   &:after {
     color: #fff;
     font-size: 18px !important;
     font-weight: bold;
+    content: "" !important;
   }
 
   &-cards {
@@ -63,5 +65,31 @@
     position: relative;
     overflow: visible;
     bottom: -40px !important;
+  }
+}
+
+.slider-testimonies {
+  margin-bottom: 20px;
+  padding-top: 120px !important;
+  @screen lg {
+    padding-block: 40px !important;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    overflow: visible;
+    bottom: -40px !important;
+  }
+  .swiper-button-testimonies {
+    top: 60px;
+    @screen lg {
+      top: 25px;
+    }
+  }
+  .swiper-button-next {
+    right: calc(50% - 58px);
+  }
+  .swiper-button-prev {
+    left: calc(50% - 58px);
   }
 }

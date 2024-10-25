@@ -72,6 +72,18 @@ export function initSlidersHome() {
 
   //home slider-questions
   new Swiper('.slider-questions', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
+
+  //home slider-testimonies
+  new Swiper('.slider-testimonies', {
     modules: [Pagination, Autoplay, Navigation],
     slidesPerView: 1,
     spaceBetween: 30,
@@ -79,6 +91,10 @@ export function initSlidersHome() {
     pagination: {
       el: '.swiper-pagination',
       clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-testimonies.swiper-button-next',
+      prevEl: '.swiper-button-testimonies.swiper-button-prev'
     }
   });
 }

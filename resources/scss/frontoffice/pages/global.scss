@@ -17,7 +17,7 @@ footer {
 
 section {
   position: relative;
-  @apply py-120;
+  @apply py-80 md:py-120;
 
   // &:first-of-type {
   //   margin-top: var(--header-height);
