@@ -1,5 +1,6 @@
 .s-partners {
   &__visual {
+    padding-bottom: 100px;
     display: flex;
     min-width: 60px;
     max-width: 150px;
@@ -13,10 +14,12 @@
       object-fit: contain;
     }
   }
-
   .swiper-pagination {
+    width: 100%;
     text-align: right;
     --swiper-pagination-bullet-inactive-color: white;
     --swiper-pagination-color: #16cffb;
+    position: relative !important;
+    bottom: -5px !important;
   }
 }

@@ -44,3 +44,24 @@
 .swiper-button.swiper-button-lock {
   display: none !important;
 }
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-inactive-color: #b1b1b1;
+  --swiper-pagination-color: #16cffb;
+}
+
+.slider-photos {
+  padding-bottom: 40px !important;
+  &__visual {
+    width: 100%;
+    img {
+      width: 100%;
+      aspect-ratio: 35/30;
+    }
+  }
+  .swiper-pagination {
+    position: relative;
+    overflow: visible;
+    bottom: -40px !important;
+  }
+}

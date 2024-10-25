@@ -7,7 +7,7 @@
     </figure>
 
     <div class="s-hero__content lg:d-grid container">
-      <div class="lg:col-span-9 xl:col-span-7 xl:col-start-2">
+      <div class="col-span-8 xl:col-span-6 xl:col-start-2">
         <h5>En tant que manager ou chef d’entreprise</h5>
         <h1>Sécurisez vos données et optimiser l’efficacité de vos collaborateurs</h1>
         <h6 class="lg:w-[60%] xl:w-full">Magvice est votre partenaire IT, expert belge en solutions de parcs informatiques,
@@ -23,7 +23,7 @@
   <section class="py-0">
     <div class="lg:d-grid container">
 
-      <div class="card-gradient-border card-gradient-border--emergency full-w-mobile">
+      <div class="card-gradient-border card-gradient-border--floating full-w-mobile">
         <div class="card-gradient-border__content">
           <h3>Vous êtes victime d’un piratage informatique&nbsp;?</h3>
           <div class="deco-gradient"></div>
@@ -37,6 +37,7 @@
 
 
   @include('sections.section-partners')
+  <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
   <section class="s-description">
@@ -85,15 +86,15 @@
       </div>
 
 
-      <div class="flex flex-col gap-80 lg:col-span-12 lg:flex-row xl:col-span-10 xl:col-start-2">
-        <div class="mt-80 w-1/3 lg:mt-0">
+      <div class="flex flex-col gap-x-80 lg:col-span-12 lg:flex-row xl:col-span-10 xl:col-start-2">
+        <div class="mt-80 lg:mt-0 lg:w-1/3">
           <figure class="mb-20">@svg('frontoffice.pages.home.password')</figure>
           <h4>Profitez des services gérés de Magvice</h4>
           <p>Economiser de l’argent et du temps en fournissant à votre entreprise un environnement sûr pour héberger vos
             services et applications.</p>
           <button class="btn">Voir les services gérés</button>
         </div>
-        <div class="mt-80 w-1/3 lg:mt-0">
+        <div class="mt-80 lg:mt-0 lg:w-1/3">
           <figure class="mb-20">@svg('frontoffice.pages.home.web-security')</figure>
           <h4>Mise en place du matériel et conception de réseaux</h4>
           <p>Aider les entreprises à concevoir des réseaux WiFi optimaux, à construire de grands réseaux câblés, à
@@ -101,7 +102,7 @@
             leur datacenter et à fournir...</p>
           <button class="btn">Voir le support matériel</button>
         </div>
-        <div class="mt-80 w-1/3 lg:mt-0">
+        <div class="mt-80 lg:mt-0 lg:w-1/3">
           <figure class="mb-20">@svg('frontoffice.pages.home.light-alert')</figure>
           <h4>Récupérez vos données après sinistre</h4>
           <p>S’assurer, qu’en cas de catastrophe, d’être toujours en mesure de fonctionner correctement dans un minimum de
@@ -115,6 +116,7 @@
   </section>
 
 
+  <div class="deco-ellipse deco-ellipse--top">@svg('frontoffice.deco-ellipse')</div>
   <section class="s-hero s-hero--security">
 
     <figure class="s-hero__visual">
@@ -133,11 +135,13 @@
 
   </section>
 
+  <div class="deco-ellipse deco-ellipse--bottom deco-ellipse--grey">@svg('frontoffice.deco-ellipse')</div>
 
-  <section class="bg-custom-grey py-0">
+
+  <section class="-mt-35 bg-custom-grey py-0">
     <div class="lg:d-grid container">
 
-      <div class="card-gradient-border full-w-mobile col-span-10 col-start-2">
+      <div class="card-gradient-border full-w-mobile col-span-10 col-start-2 lg:-my-70">
         <div class="card-gradient-border__content !text-center">
           <h5>Besoin d’y voir plus clair ?</h5>
           <h3>Profitez d’un diagnostic GRATUIT concernant la situation actuelle de votre structure</h3>
@@ -238,6 +242,7 @@
 
     </div>
   </section>
+  <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
   <section class="s-prices">
@@ -274,7 +279,7 @@
   <section class="py-0">
     <div class="lg:d-grid container">
 
-      <div class="card-gradient-border card-gradient-border--emergency full-w-mobile lg:!-top-[450px]">
+      <div class="card-gradient-border card-gradient-border--floating card-gradient-border--prices full-w-mobile">
         <div class="card-gradient-border__content !px-20">
 
           <div class="flex flex-col justify-between gap-x-50 gap-y-20 sm:flex-row lg:items-center">
@@ -290,7 +295,7 @@
           <p>Includes:</p>
           <ul class="text-ul flex flex-col justify-between gap-x-30 sm:flex-row">
             <div class="w-1/2">
-              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here </li>
+              <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
               <li>@svg('frontoffice.icons.icon-chevron')Feature text goes here</li>
@@ -315,39 +320,119 @@
   </section>
 
 
-  <section class="s-slider pt-[240px]">
+  <section class="lg:pb-20 lg:pt-[320px]">
     <div class="lg:d-grid container">
 
-      <div class="xl-col-start-2 lg:col-span-12 xl:col-span-10">
+      <div class="col-span-12">
+
+        <div class="swiper slider-photos">
+          <div class="swiper-wrapper">
+            @for ($i = 1; $i < 5; $i++)
+              <div class="swiper-slide">
+                <figure class="slider-photos__visual">
+                  <img src="{{ asset('images/home/slider-photos/slider' . $i . '.jpg') }}" alt="">
+                </figure>
+              </div>
+            @endfor
+            @for ($i = 1; $i < 5; $i++)
+              <div class="swiper-slide">
+                <figure class="slider-photos__visual">
+                  <img src="{{ asset('images/home/slider-photos/slider' . $i . '.jpg') }}" alt="">
+                </figure>
+              </div>
+            @endfor
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
 
       </div>
 
     </div>
   </section>
 
-
-  <section class="testimonies bg-custom-grey">
+  <div class="deco-ellipse deco-ellipse--top">@svg('frontoffice.deco-ellipse')</div>
+  <section class="s-testimonies bg-custom-grey">
     <div class="lg:d-grid container">
 
-      <div class="col-span-10 col-start-2 text-center">
-        <h5>De vrais témoignages avec de vrais enjeux</h5>
+      <div class="col-span-8 col-start-3 text-center">
+
+        <h5 class="mb-15">De vrais témoignages avec de vrais enjeux</h5>
         <h3>Ils témoignent de leur confiance</h3>
         <div class="flex justify-center gap-5">
           @for ($i = 0; $i < 5; $i++)
             @svg('frontoffice.icons.star')
           @endfor
         </div>
+
+        <div class="mb-20 mt-40">
+          <h6 class="text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+            eros
+            elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat."</h6>
+          <div class="flex h-60 items-center justify-center gap-x-20">
+            <figure><img src="{{ asset('/images/home/avatar1.png') }}" alt="avatar of Gaétan"></figure>
+            <div class="flex flex-col justify-center text-left">
+              <p class="title-7 mb-0">John Doe</p>
+              <p class="mb-0">Position, Company name</p>
+            </div>
+            <div class="separator-gradient"></div>
+            @svg('frontoffice.sections.partners.placeholder2')
+          </div>
+        </div>
+
       </div>
 
     </div>
   </section>
+  <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
   <section class="s-dyk">
+    <div class="lg:d-grid container">
 
+      <div class="col-span-6">
+        <h5>Retrouvez toute l’actualité simplifiée</h5>
+        <h2>Le saviez-vous&nbsp;?</h2>
+        <div class="deco-gradient"></div>
+        <p class="title-7 mb-30">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur
+          adipiscing
+          elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. iscing elit. </p>
+        <a href="/" class="btn btn--secondary mb-80">Voir tous les articles de blog</a>
+      </div>
+
+      <div class="col-span-6 flex flex-col gap-y-80">
+        <article class="a-resume">
+          <figure>
+            <img src="{{ asset('/images/home/laptop.png') }}" alt="Picture of a laptop">
+          </figure>
+          <div class="a-resume__content">
+            <span class="a-resume__date">Publié le 00/00/00</span>
+            <h6>Un monitoring aurait pu sauver des vies le 11 septembre</h6>
+            <p>le service It s’est occupé de transfert les données avant de mourir dans la cave d’une tour. D’où
+              l’importance d’automatiser&nbsp;!</p>
+            <button>Lire tout l'article @svg('frontoffice/icons/icon-chevron-right')</button>
+          </div>
+        </article>
+
+        <article class="a-resume">
+          <figure>
+            <img src="{{ asset('/images/home/anonymous.png') }}" alt="Picture of a hacker">
+          </figure>
+          <div class="a-resume__content">
+            <span class="a-resume__date">Publié le 00/00/00</span>
+            <h6>Une nouvelle norme de conformité devra être mise en vigueur à partir de janvier 2025</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim...</p>
+            <button>Lire tout l'article @svg('frontoffice/icons/icon-chevron-right')</button>
+          </div>
+        </article>
+      </div>
+
+
+
+    </div>
   </section>
 
-
+  <div class="deco-ellipse deco-ellipse--top">@svg('frontoffice.deco-ellipse')</div>
   <section class="s-newsletter">
     <div class="lg:d-grid container">
       <div class="col-span-6 col-start-4 text-center">
@@ -371,10 +456,46 @@
       </form>
 
   </section>
+  <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
   <section class="s-ask-question">
+    <div class="lg:d-grid container">
 
+      <div class="col-span-7 lg:w-[88%]">
+        <h5>Ne restez pas sans réponses</h5>
+        <h2>Posez-nous vos questions</h2>
+        <div class="deco-gradient"></div>
+        <p class="title-7 mb-30">Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. iscing elit. </p>
+
+        <div class="swiper slider-questions">
+          <div class="swiper-wrapper" data-anim="slide-right-multiple" data-offset="200">
+            @for ($i = 0; $i < 4; $i++)
+              <div class="swiper-slide">
+
+                <article class="s-ask-question__slider">
+                  <div class="dialog mb-20">
+                    <h6>“Sommes-nous préparés à réagir en cas de cyber-attaque&nbsp;?”</h6>
+                  </div>
+                  <div class="dialog dialog--right">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                    varius enim in eros elementum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+                    eros elemm dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elemm
+                    tristique. Duis cursus, mi quis viverra ornare."</div>
+                </article>
+
+              </div>
+            @endfor
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+      <figure class="col-span-5 mt-40 flex h-full items-center justify-center lg:mt-0">
+        <img src="{{ asset('/images/home/big-gaetan.png') }}" alt="Big picture of Gaétan">
+      </figure>
+    </div>
   </section>
 
 

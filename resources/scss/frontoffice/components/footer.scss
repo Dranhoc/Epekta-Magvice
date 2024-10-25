@@ -1,10 +1,10 @@
 .g-footer {
-  @apply bg-grey text-white py-40 overflow-hidden;
+  @apply bg-primary text-white py-40 overflow-hidden;
   padding-top: 200px;
 
-  .logo * {
-    fill: #fff;
-  }
+  // .logo * {
+  //   fill: #fff;
+  // }
 
   .icon-social {
     height: 24px;

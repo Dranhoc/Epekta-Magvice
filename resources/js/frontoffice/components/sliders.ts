@@ -46,4 +46,39 @@ export function initSlidersHome() {
       clickable: true
     }
   });
+
+  //home slider-photos
+  new Swiper('.slider-photos', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 1,
+    breakpoints: {
+      630: {
+        slidesPerView: 2
+      },
+      960: {
+        slidesPerView: 3
+      },
+      1290: {
+        slidesPerView: 4
+      }
+    },
+    spaceBetween: 30,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
+
+  //home slider-questions
+  new Swiper('.slider-questions', {
+    modules: [Pagination, Autoplay, Navigation],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
 }

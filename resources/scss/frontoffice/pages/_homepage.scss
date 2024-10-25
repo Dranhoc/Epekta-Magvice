@@ -114,3 +114,68 @@
   background: var(--gradient);
   @apply text-white;
 }
+
+.a-resume {
+  display: flex;
+  gap: 30px;
+  @apply flex-col sm:flex-row;
+
+  &__date {
+    @apply inline-block px-10 py-1 bg-custom-grey mb-10 rounded-20;
+  }
+
+  figure {
+    min-width: 33.3%;
+    img {
+      aspect-ratio: 1/1;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    @apply lg:w-2/3;
+
+    button {
+      @apply flex gap-10 text-magenta transition-[color];
+
+      svg path {
+        @apply fill-magenta transition-[fill];
+      }
+
+      &:hover {
+        @apply text-purple;
+
+        svg path {
+          @apply fill-purple;
+        }
+      }
+    }
+  }
+}
+
+.s-ask-question {
+  &__slider {
+    padding-block: 65px;
+    padding-inline: 10px;
+    .dialog {
+      padding: 32px;
+      border-radius: 30px;
+      border-top-left-radius: 0px;
+      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+      @apply text-purple;
+      @screen sm {
+        width: calc(100% - 12%);
+      }
+
+      &--right {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 0px;
+        margin-left: auto;
+        @apply text-grey;
+      }
+    }
+  }
+  .swiper-pagination {
+    text-align: left;
+  }
+}

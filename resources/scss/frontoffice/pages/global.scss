@@ -12,9 +12,6 @@ footer {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto !important;
-    @media (min-width: 2000px) {
-      max-width: 1920px;
-    }
   }
 }
 
@@ -43,7 +40,7 @@ section {
 
 .s-hero {
   @apply relative text-white;
-  min-height: 60vh;
+  // min-height: 60vh;
 
   &__visual {
     position: absolute;
@@ -124,7 +121,7 @@ section {
     }
   }
 
-  &--emergency {
+  &--floating {
     position: relative;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
@@ -138,6 +135,14 @@ section {
       border-radius: 20px;
     }
   }
+  &--prices {
+    @screen lg {
+      top: -450px;
+    }
+    @screen 2xl {
+      right: 120px;
+    }
+  }
 }
 
 .deco-gradient {
@@ -147,6 +152,7 @@ section {
   background: var(--gradient);
   margin-block: 25px;
 }
+
 .deco-grey {
   width: 100%;
   height: 4px;
@@ -159,5 +165,52 @@ section {
   @media (max-width: 1023px) {
     width: 100vw;
   }
-  @apply -m-20 sm:-m-40;
+  @apply -mx-20 sm:-mx-40;
+}
+
+.border-l-gradient {
+  border-left: 3px;
+}
+
+.separator-gradient {
+  background: var(--gradient-vertical);
+  height: 100%;
+  width: 4px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.deco-ellipse {
+  position: relative;
+  z-index: 1;
+  height: 35px;
+  width: 100vw;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+
+  &--bottom {
+    transform: translateY(-34px);
+  }
+  &--top {
+    transform: translateY(34px) rotateX(-180deg);
+  }
+
+  &--primary {
+    svg {
+      @apply text-primary;
+    }
+  }
+
+  &--grey {
+    svg {
+      @apply text-custom-grey;
+    }
+  }
 }
