@@ -16,31 +16,6 @@
   justify-content: center !important;
   border-radius: 50%;
   padding: 12px;
-
-  &:after {
-    color: #fff;
-    font-size: 18px !important;
-    font-weight: bold;
-    content: "" !important;
-  }
-
-  &-cards {
-    &.swiper-button-prev {
-      left: -20px;
-
-      @screen xl {
-        left: -60px;
-      }
-    }
-
-    &.swiper-button-next {
-      right: -20px;
-
-      @screen xl {
-        right: -60px;
-      }
-    }
-  }
 }
 
 .swiper-button.swiper-button-lock {
@@ -86,10 +61,14 @@
       top: 25px;
     }
   }
+
   .swiper-button-next {
     right: calc(50% - 58px);
+    @apply lg:right-20;
   }
+
   .swiper-button-prev {
     left: calc(50% - 58px);
+    @apply lg:left-20;
   }
 }

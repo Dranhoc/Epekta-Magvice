@@ -481,7 +481,7 @@
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-ask-question pb-80">
+  <section class="s-faq pb-80">
     <div class="lg:d-grid container">
 
       <div class="col-span-7 lg:w-[88%]">
@@ -496,7 +496,7 @@
             @for ($i = 0; $i < 4; $i++)
               <div class="swiper-slide">
 
-                <article class="s-ask-question__slider">
+                <article class="s-faq__slider">
                   <div class="dialog mb-20">
                     <h6>“Sommes-nous préparés à réagir en cas de cyber-attaque&nbsp;?”</h6>
                   </div>
@@ -514,7 +514,7 @@
 
       </div>
 
-      <figure class="s-ask-question__visual col-span-5">
+      <figure class="s-faq__visual col-span-5">
         <img src="{{ asset('/images/home/big-gaetan.png') }}" alt="Big picture of Gaétan">
       </figure>
     </div>
