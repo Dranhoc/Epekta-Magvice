@@ -3,7 +3,7 @@
   <section class="s-hero py-0">
 
     <figure class="s-hero__visual">
-      <img src="{{ asset('/images/header-bg.jpg') }}" alt="Background of a nature scene">
+      <img src="{{ asset('/images/header-bg.jpg') }}" alt="Background of a nature scene" loading="lazy">
     </figure>
 
     <div class="s-hero__content lg:d-grid container">
@@ -40,7 +40,7 @@
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-description">
+  <section id="services" class="s-services">
     <div class="lg:d-grid container">
 
       <div class="col-span-7 col-start-2">
@@ -81,7 +81,7 @@
       <div class="col-span-10 col-start-2">
         <figure class="my-80">
           <img class="max-h-[561px] w-full rounded-20 object-cover" src="{{ asset('/images/home/hero-worker.jpg') }}"
-            alt="Working man with a lot of cables">
+            alt="Working man with a lot of cables" loading="lazy">
         </figure>
       </div>
 
@@ -121,7 +121,7 @@
 
     <figure class="s-hero__visual">
       <img class="w-full overflow-hidden object-cover" src="{{ asset('/images/home/hero-router.jpg') }}"
-        alt="Background of a router">
+        alt="Background of a router" loading="lazy">
     </figure>
 
     <div class="container relative">
@@ -156,15 +156,15 @@
   </section>
 
 
-  <section class="s-values lg:pb-60 lg:pt-180">
+  <section id="about" class="s-about lg:pb-60 lg:pt-180">
     <div class="lg:d-grid container">
 
       <div class="col-span-6">
         <h5>Valeurs Magvice</h5>
         <h2>Gaétan, votre assureur en informatique qui vous accompagne pas à pas dans l’univers du cloud</h2>
         <div class="deco-gradient"></div>
-        <figure class="s-values__visual">
-          <img src="{{ asset('/images/home/gaetan.jpg') }}" alt="Picture of Gaétan">
+        <figure class="s-about__visual">
+          <img src="{{ asset('/images/home/gaetan.jpg') }}" alt="Picture of Gaétan" loading="lazy">
         </figure>
       </div>
 
@@ -244,7 +244,7 @@
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-prices">
+  <section id="prices" class="s-prices">
     <div class="lg:d-grid container">
 
       <div class="col-span-12 xl:col-span-10 xl:col-start-2">
@@ -329,14 +329,16 @@
             @for ($i = 1; $i < 5; $i++)
               <div class="swiper-slide">
                 <figure class="slider-photos__visual">
-                  <img src="{{ asset('images/home/slider-photos/slider' . $i . '.jpg') }}" alt="">
+                  <img src="{{ asset('images/home/slider-photos/slider' . $i . '.jpg') }}" alt=""
+                    loading="lazy">
                 </figure>
               </div>
             @endfor
             @for ($i = 1; $i < 5; $i++)
               <div class="swiper-slide">
                 <figure class="slider-photos__visual">
-                  <img src="{{ asset('images/home/slider-photos/slider' . $i . '.jpg') }}" alt="">
+                  <img src="{{ asset('images/home/slider-photos/slider' . $i . '.jpg') }}" alt=""
+                    loading="lazy">
                 </figure>
               </div>
             @endfor
@@ -351,7 +353,7 @@
 
 
   <div class="deco-ellipse deco-ellipse--top">@svg('frontoffice.deco-ellipse')</div>
-  <section class="s-testimonies bg-custom-grey">
+  <section id="testimonies" class="s-testimonies bg-custom-grey">
     <div class="lg:d-grid container">
       <div class="col-span-10 col-start-2 text-center">
 
@@ -367,24 +369,23 @@
           <div class="swiper-wrapper">
 
             @for ($i = 0; $i < 4; $i++)
-              <div class="swiper-slide">
-                <div class="px-40 lg:px-150">
-                  <h6 class="text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                    enim
-                    in
-                    eros
-                    elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-                    libero
-                    vitae erat."</h6>
-                  <div class="flex h-60 items-center justify-center gap-x-20">
-                    <figure><img src="{{ asset('/images/home/avatar1.png') }}" alt="avatar of Gaétan"></figure>
-                    <div class="flex flex-col justify-center text-left">
-                      <p class="title-7 mb-0">John Doe</p>
-                      <p class="mb-0">Position, Company name</p>
-                    </div>
-                    <div class="separator-gradient"></div>
-                    @svg('frontoffice.sections.partners.placeholder2')
+              <div class="swiper-slide px-40 lg:px-150">
+                <h6 class="text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                  enim
+                  in
+                  eros
+                  elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+                  libero
+                  vitae erat."</h6>
+                <div class="flex h-60 items-center justify-center gap-x-20">
+                  <figure><img src="{{ asset('/images/home/avatar1.png') }}" alt="avatar of Gaétan" loading="lazy">
+                  </figure>
+                  <div class="flex flex-col justify-center text-left">
+                    <p class="title-7 mb-0">John Doe</p>
+                    <p class="mb-0">Position, Company name</p>
                   </div>
+                  <div class="separator-gradient"></div>
+                  @svg('frontoffice.sections.partners.placeholder2')
                 </div>
               </div>
             @endfor
@@ -425,7 +426,7 @@
       <div class="col-span-6 flex flex-col gap-y-80">
         <article class="a-resume">
           <figure>
-            <img src="{{ asset('/images/home/laptop.png') }}" alt="Picture of a laptop">
+            <img src="{{ asset('/images/home/laptop.png') }}" alt="Picture of a laptop" loading="lazy">
           </figure>
           <div class="a-resume__content">
             <span class="a-resume__date">Publié le 00/00/00</span>
@@ -438,7 +439,7 @@
 
         <article class="a-resume">
           <figure>
-            <img src="{{ asset('/images/home/anonymous.png') }}" alt="Picture of a hacker">
+            <img src="{{ asset('/images/home/anonymous.png') }}" alt="Picture of a hacker" loading="lazy">
           </figure>
           <div class="a-resume__content">
             <span class="a-resume__date">Publié le 00/00/00</span>
@@ -448,8 +449,6 @@
           </div>
         </article>
       </div>
-
-
 
     </div>
   </section>
@@ -481,7 +480,7 @@
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-faq pb-80">
+  <section id="faq" class="s-faq pb-80">
     <div class="lg:d-grid container">
 
       <div class="col-span-7 lg:w-[88%]">
@@ -515,7 +514,7 @@
       </div>
 
       <figure class="s-faq__visual col-span-5">
-        <img src="{{ asset('/images/home/big-gaetan.png') }}" alt="Big picture of Gaétan">
+        <img src="{{ asset('/images/home/big-gaetan.png') }}" alt="Big picture of Gaétan" loading="lazy">
       </figure>
     </div>
   </section>
@@ -529,8 +528,8 @@
           <h5>Besoin d’y voir plus clair&nbsp;?</h5>
           <h3>Vous avez des questions&nbsp;?</h3>
           <div class="deco-gradient mx-auto"></div>
-          <p class="title-7">Toutes les questions ne resterons pas sans réponses. Nous reviendrons vers vous dans les
-            24h.
+          <p class="title-7">Toutes les questions ne resterons pas sans réponses.
+            Nous reviendrons vers vous dans les 24h.
           </p>
           <div class="mb-20 mt-40 flex flex-wrap justify-center gap-20">
             <a href="/" class="btn">Contactez-nous&nbsp;!</a>

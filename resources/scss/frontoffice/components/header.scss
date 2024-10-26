@@ -18,25 +18,46 @@
     }
   }
 }
+.bg-header {
+  position: fixed;
+  top: 0;
+  height: 81px;
+  width: 100%;
+  z-index: 100;
+  @apply bg-white ease-smooth border-b border-custom-grey;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.5s;
+
+  &.header-scroll {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
 
 .g-header {
-  position: fixed;
-  top: 30px;
-  left: 0px;
-  right: 0px;
-  margin-inline: auto;
-  width: 100%;
-  max-width: 1440px;
-  @apply bg-white  rounded-10 shadow-xl;
-  z-index: 100;
+  &__content {
+    position: fixed;
+    margin-inline: auto;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+    transform: translateY(0px);
+    transition:
+      transform 0.5s,
+      padding 0.5s;
+    @apply bg-white rounded-10 flex w-full py-[14px] px-20 sm:px-60 ease-smooth;
 
-  .container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    z-index: 2;
+    max-width: calc(100% - 40px);
+    @screen sm {
+      max-width: calc(100% - 80px);
+    }
+    @screen 3xl {
+      max-width: calc(1920px - 40px);
+    }
+    &.header-scroll {
+      transform: translateY(-30px);
+      @apply py-[17px];
+    }
   }
 
   &__logo {

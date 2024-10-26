@@ -10,7 +10,6 @@ footer {
   .container {
     position: relative;
     width: 100%;
-    max-width: 1440px;
     margin: 0 auto !important;
   }
 }
@@ -102,7 +101,7 @@ section {
 
     mask-composite: exclude;
 
-    clip-path: polygon(9% 64%, 96% 44%, 100% 44%, 100% 100%, 0 100%, 0 64%);
+    clip-path: polygon(9% 64%, 96% 7%, 100% 7%, 100% 100%, 0 100%, 0 64%);
 
     z-index: -1;
     @screen sm {

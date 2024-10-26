@@ -13,3 +13,25 @@ export function toggleMenu() {
     document.body.classList.toggle('menu-open');
   });
 }
+
+export function animationHeader() {
+  let lastScrollY = 0;
+  const headerContent = document.querySelector('.g-header__content') as HTMLElement;
+  const bgHeader = document.querySelector('.bg-header') as HTMLElement;
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 200) {
+      headerContent.classList.add('header-scroll');
+      bgHeader.classList.add('header-scroll');
+    } else {
+      headerContent.classList.remove('header-scroll');
+      bgHeader.classList.remove('header-scroll');
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+}

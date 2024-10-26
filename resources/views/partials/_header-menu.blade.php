@@ -1,5 +1,5 @@
 <nav class="{{ $mobile ? 'g-header__nav-mobile' : 'g-header__nav' }}">
-  <a href="/guidelines">À&nbsp;propos</a>
+  <a href="#about">À&nbsp;propos</a>
   <div class="submenu">
     <button class="title-secondary">Services</button>
     <div class="subnav">
@@ -12,10 +12,10 @@
       </nav>
     </div>
   </div>
-  <a href="/">Tarifs</a>
-  <a href="/">Témoignages</a>
-  <a href="/">FAQ</a>
-  <a href="/blog">Blog</a>
+  <a href="#prices">Tarifs</a>
+  <a href="#testimonies">Témoignages</a>
+  <a href="#faq">FAQ</a>
+  <a href="#blog">Blog</a>
   <button class="btn btn--secondary ml-auto" href="/contact">Assistance à distance</button>
   <button class="btn" href="/contact">Contact</button>
   <div class="submenu">

@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       screens: {
         'container': '1440px',
+        '3xl': '1920px',
       },
       spacing: {
         // vertical spacings

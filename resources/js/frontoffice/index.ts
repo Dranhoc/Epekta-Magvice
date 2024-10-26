@@ -1,12 +1,11 @@
 import { initSlidersHome } from './components/sliders';
-import { headerHeight, toggleMenu } from './components/header';
+import { headerHeight, toggleMenu, animationHeader } from './components/header';
 import { footerInit } from './components/footer';
 import { initForms } from './components/forms';
 import { initAccordions } from './components/accordions';
 import { toggleModals } from './components/modals';
 
-
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   headerHeight();
   toggleMenu();
   initSlidersHome();
@@ -14,8 +13,9 @@ window.addEventListener("DOMContentLoaded", () => {
   initForms();
   initAccordions();
   toggleModals();
+  animationHeader();
 });
 
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
   headerHeight();
 });

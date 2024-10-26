@@ -2,11 +2,11 @@
   &__visual {
     padding-bottom: 100px;
     display: flex;
-    min-width: 60px;
-    max-width: 150px;
+    min-width: 80px;
+    max-width: 140px;
     height: 110px;
     @screen sm {
-      height: 150px;
+      height: 140px;
     }
     img {
       margin-block: 15px;
@@ -14,12 +14,17 @@
       object-fit: contain;
     }
   }
+
+  .swiper-logos {
+    padding-block: 20px;
+  }
+
   .swiper-pagination {
     width: 100%;
     text-align: right;
     --swiper-pagination-bullet-inactive-color: white;
     --swiper-pagination-color: #16cffb;
     position: relative !important;
-    bottom: -5px !important;
+    bottom: -20px !important;
   }
 }

@@ -1,50 +1,39 @@
 .g-footer {
-  @apply bg-primary text-white py-40 overflow-hidden;
-  padding-top: 200px;
+  @apply bg-primary text-white py-80 overflow-hidden;
 
-  // .logo * {
-  //   fill: #fff;
-  // }
+  a {
+    transition: color 0.3s ease;
+    &:hover {
+      @apply text-bluelight;
+    }
+  }
 
   .icon-social {
     height: 24px;
     width: auto;
   }
+  &__socials {
+    @apply flex justify-start gap-[12px] lg:mb-0;
 
-  .list-icons-social a {
-    position: relative;
+    a {
+      position: relative;
 
-    &:hover {
-      svg {
-        path {
-          @apply fill-primary;
-        }
-
-        &.icon-ig path {
-          @apply fill-transparent stroke-primary;
-        }
-      }
-    }
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  a {
-    &:hover {
-      @apply text-primary;
-    }
-  }
-
-  &__arrow {
-    display: block;
-    cursor: pointer;
-
-    &:hover {
       svg path {
-        @apply stroke-primary;
+        transition: fill 0.3s ease;
+      }
+
+      &:hover svg path {
+        @apply fill-magenta;
       }
     }
+  }
+
+  &__nav {
+    @apply flex flex-col gap-15 lg:flex-row lg:items-center lg:justify-center;
+  }
+
+  &__footer {
+    font-size: 12px;
+    @apply flex flex-col md:flex-row md:justify-center gap-x-20;
   }
 }

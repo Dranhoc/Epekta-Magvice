@@ -1,12 +1,3 @@
-.slider-cards {
-  &--container {
-    position: relative;
-    width: 100%;
-    max-width: 1240px;
-    margin: 0 auto;
-  }
-}
-
 .swiper-button {
   @apply bg-white;
   width: 48px !important;
@@ -65,10 +56,16 @@
   .swiper-button-next {
     right: calc(50% - 58px);
     @apply lg:right-20;
+    &::after {
+      display: none;
+    }
   }
 
   .swiper-button-prev {
     left: calc(50% - 58px);
     @apply lg:left-20;
+    &::after {
+      display: none;
+    }
   }
 }

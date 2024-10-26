@@ -1,12 +1,12 @@
 <section class="s-partners bg-custom-grey text-primary">
   <div class="lg:d-grid container">
 
-    <div class="col-span-4 col-start-2 flex flex-col justify-center">
+    <div class="col-span-4 col-start-2 3xl:col-span-3 3xl:col-start-2">
       <h5>Ils nous font confiance</h5>
-      <h4>Ils ont choisis Magvice pour protéger leurs infrastructures </h4>
+      <h4 class="font-semibold">Ils ont choisis Magvice pour protéger leurs infrastructures </h4>
     </div>
 
-    <div class="relative z-[0] col-span-6 flex items-center">
+    <div class="relative z-[0] col-span-6 col-start-6 flex items-center">
       <div class="swiper swiper-logos">
 
         <div class="swiper-wrapper" data-anim="slide-right-multiple" data-offset="200">
