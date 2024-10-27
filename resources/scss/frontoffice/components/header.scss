@@ -52,11 +52,11 @@
       max-width: calc(100% - 80px);
     }
     @screen 3xl {
-      max-width: calc(1920px - 40px);
+      max-width: calc(100% - 16.666% - 40px); // -2 grid col
     }
     &.header-scroll {
       transform: translateY(-30px);
-      @apply py-[17px];
+      @apply py-[17px] px-0;
     }
   }
 
@@ -232,7 +232,7 @@
   justify-content: space-between;
   align-items: flex-end;
 
-  @screen lg {
+  @screen 2xl {
     display: none;
   }
 

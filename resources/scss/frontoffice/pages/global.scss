@@ -10,6 +10,7 @@ footer {
   .container {
     position: relative;
     width: 100%;
+    max-width: 1920px;
     margin: 0 auto !important;
   }
 }
@@ -76,9 +77,12 @@ section {
   position: relative;
   padding: 14px;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
   z-index: 1;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @screen lg {
+    border-radius: 20px;
+  }
 
   &::before {
     content: "";
@@ -122,8 +126,6 @@ section {
 
   &--floating {
     position: relative;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
     z-index: 2;
 
     @screen lg {
@@ -133,13 +135,16 @@ section {
       max-width: 550px;
       border-radius: 20px;
     }
+    @screen 3xl {
+      right: calc(12.5% + 40px); //1.5 grid col + margin
+    }
   }
   &--prices {
     @screen lg {
       top: -450px;
     }
-    @screen 2xl {
-      right: 120px;
+    @screen 3xl {
+      right: calc(8.333% + 40px); //1 grid col + margin
     }
   }
 }
@@ -164,7 +169,7 @@ section {
   @media (max-width: 1023px) {
     width: 100vw;
   }
-  @apply -mx-20 sm:-mx-40;
+  @apply -mr-20 sm:-mr-40;
 }
 
 .border-l-gradient {

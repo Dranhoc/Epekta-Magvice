@@ -6,7 +6,7 @@
       <h4 class="font-semibold">Ils ont choisis Magvice pour protéger leurs infrastructures </h4>
     </div>
 
-    <div class="relative z-[0] col-span-6 col-start-6 flex items-center">
+    <div class="relative z-[0] col-span-6 col-start-6 flex items-center 3xl:col-span-5 3xl:col-start-7">
       <div class="swiper swiper-logos">
 
         <div class="swiper-wrapper" data-anim="slide-right-multiple" data-offset="200">

@@ -7,7 +7,7 @@
     </figure>
 
     <div class="s-hero__content lg:d-grid container">
-      <div class="col-span-8 xl:col-span-6 xl:col-start-2">
+      <div class="col-span-8 xl:col-span-6 xl:col-start-2 3xl:col-span-5 3xl:col-start-2">
         <h5>En tant que manager ou chef d’entreprise</h5>
         <h1>Sécurisez vos données et optimiser l’efficacité de vos collaborateurs</h1>
         <h6 class="lg:w-[60%] xl:w-full">Magvice est votre partenaire IT, expert belge en solutions de parcs informatiques,
@@ -20,7 +20,7 @@
   </section>
 
 
-  <section class="py-0">
+  <section class="p-0">
     <div class="lg:d-grid container">
 
       <div class="card-gradient-border card-gradient-border--floating full-w-mobile">
@@ -61,9 +61,9 @@
         <h4>Assurez la conformité de sécurité de votre infrastructure</h4>
         <p>Le but est d’aider les entreprises à renforcer la sécurité de leurs datacenters (serveurs/données/applications,
           réseaux, etc...), de leurs terminaux (ordinateurs, appareils mobiles) et des actifs publics...</p>
-        <div class="flex flex-wrap gap-20">
-          <button class="btn">Mise en conformité</button>
-          <button class="btn btn--secondary">Demander un test GRATUIT</button>
+        <div class="flex flex-col gap-20 3xl:flex-row">
+          <button class="btn w-[fit-content]">Mise en conformité</button>
+          <button class="btn btn--secondary w-[fit-content]">Demander un test GRATUIT</button>
         </div>
       </div>
 
@@ -72,9 +72,9 @@
         <h4>Améliorez les compétences de votre équipe avec des solutions modernes et hybrides</h4>
         <p>Permettre aux collaborateurs de travailler de n’importe où à tout moment d’une manière sécurisée et optimisée.
         </p>
-        <div class="flex flex-wrap gap-20">
-          <button class="btn">Gestion de réseau</button>
-          <button class="btn btn--secondary">Voir les avantages d’une externalisation</button>
+        <div class="flex flex-col gap-20 3xl:flex-row">
+          <button class="btn w-[fit-content]">Gestion de réseau</button>
+          <button class="btn btn--secondary w-[fit-content]">Voir les avantages d’une externalisation</button>
         </div>
       </div>
 
@@ -159,7 +159,7 @@
   <section id="about" class="s-about lg:pb-60 lg:pt-180">
     <div class="lg:d-grid container">
 
-      <div class="col-span-6">
+      <div class="col-span-6 3xl:col-span-5 3xl:col-start-2">
         <h5>Valeurs Magvice</h5>
         <h2>Gaétan, votre assureur en informatique qui vous accompagne pas à pas dans l’univers du cloud</h2>
         <div class="deco-gradient"></div>
@@ -168,7 +168,7 @@
         </figure>
       </div>
 
-      <div class="col-span-6">
+      <div class="col-span-6 3xl:col-span-5">
 
         <p class="title-7 mb-80 mt-40 lg:my-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim
@@ -202,7 +202,7 @@
   <section class="s-iframe py-0">
     <div class="lg:d-grid container">
 
-      <div class="col-span-10 col-start-2">
+      <div class="col-span-12 3xl:col-span-10 3xl:col-start-2">
         <figure class="flex justify-center">
           <iframe class="aspect-[150/73] w-full rounded-20 shadow-xl" src="https://www.youtube.com/embed/L8E7cZWBuq8"
             title="Voici Le Plus Grand Data Center Au Monde" frameborder="0"
@@ -217,12 +217,12 @@
   <section class="bg-primary">
     <div class="lg:d-grid container">
 
-      <div class="col-span-6 xl:col-span-5 xl:col-start-2">
+      <div class="col-span-6 3xl:col-span-5 3xl:col-start-2">
         <h3 class="text-white">Long heading is what you see here in this feature section</h3>
         <div class="deco-gradient"></div>
       </div>
 
-      <div class="col-span-12 mt-60 xl:col-span-10 xl:col-start-2">
+      <div class="col-span-12 mt-60 3xl:col-span-10 3xl:col-start-2">
         <div class="key-numbers">
           <div>
             <h6>10<span>X</span></h6>
@@ -251,8 +251,8 @@
         <h5>Des prix abordables et sur-mesure</h5>
         <h2>Packs tarifaires</h2>
         <div class="deco-gradient"></div>
-        <p class="title-7 mb-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, rerum doloremque.
-          Explicabo placeat veniam libero voluptas aliquid distinctio animi recusandae.</p>
+        <p class="title-7 mb-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+          elementum tristique.</p>
 
         <h4>Service + gérance</h4>
         <p class="s-prices__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
@@ -413,7 +413,7 @@
   <section class="s-dyk py-30 lg:py-90">
     <div class="lg:d-grid container">
 
-      <div class="col-span-6">
+      <div class="col-span-6 3xl:col-span-5 3xl:col-start-2">
         <h5>Retrouvez toute l’actualité simplifiée</h5>
         <h2>Le saviez-vous&nbsp;?</h2>
         <div class="deco-gradient"></div>
@@ -423,7 +423,7 @@
         <a href="/" class="btn btn--secondary mb-80">Voir tous les articles de blog</a>
       </div>
 
-      <div class="col-span-6 flex flex-col gap-y-80">
+      <div class="col-span-6 flex flex-col gap-y-80 3xl:col-span-5">
         <article class="a-resume">
           <figure>
             <img src="{{ asset('/images/home/laptop.png') }}" alt="Picture of a laptop" loading="lazy">
@@ -483,7 +483,7 @@
   <section id="faq" class="s-faq pb-80">
     <div class="lg:d-grid container">
 
-      <div class="col-span-7 lg:w-[88%]">
+      <div class="col-span-7 lg:w-[88%] 3xl:col-start-2">
         <h5>Ne restez pas sans réponses</h5>
         <h2>Posez-nous vos questions</h2>
         <div class="deco-gradient"></div>
@@ -513,7 +513,7 @@
 
       </div>
 
-      <figure class="s-faq__visual col-span-5">
+      <figure class="s-faq__visual col-span-5 3xl:col-span-4">
         <img src="{{ asset('/images/home/big-gaetan.png') }}" alt="Big picture of Gaétan" loading="lazy">
       </figure>
     </div>
