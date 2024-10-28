@@ -1,11 +1,7 @@
 <nav class="{{ $mobile ? 'g-header__nav-mobile' : 'g-header__nav ' }}">
-  {{-- <figure class="g-header__logo {{ $mobile ?: 'hidden' }}">
-    <a href="/">
-      @svg('logo', 'logo')
-    </a>
-  </figure> --}}
+  <div class="g-header__separator"></div>
   <a href="#about">À&nbsp;propos</a>
-  <div class="submenu">
+  <div class="submenu services">
     <button class="title-secondary">Services</button>
     <div class="subnav">
       <nav>
@@ -20,8 +16,8 @@
   <a href="#prices">Tarifs</a>
   <a href="#testimonies">Témoignages</a>
   <a href="#faq">FAQ</a>
-  <a href="#blog" class="py-30 2xl:py-0 3xl:px-30">Blog</a>
-  <button class="btn btn--secondary ml-auto" href="/contact">Assistance à distance</button>
+  <a href="#blog" class="3xl:px-30">Blog</a>
+  <button class="btn btn--secondary ml-auto mt-10 2xl:mt-0" href="/contact">Assistance à distance</button>
   <button class="btn" href="/contact">Contact</button>
   <div class="submenu">
     <button class="title-secondary">FR</button>

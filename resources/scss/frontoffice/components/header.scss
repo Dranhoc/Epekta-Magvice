@@ -3,13 +3,16 @@
   top: 100%;
   padding-top: 31px;
   left: -20px;
-  display: none;
+  opacity: 0;
   padding-left: 0;
-
+  transition:
+    opacity 0.5s,
+    transform 0.3s;
+  @apply ease-smooth;
   nav {
     padding: 20px;
     border-radius: 20px;
-    @apply bg-white text-primary;
+    @apply bg-white text-primary shadow-xl;
 
     a {
       &:before {
@@ -43,10 +46,10 @@
     right: 0;
     z-index: 100;
     transform: translateY(0px);
-    transition: all 0.4s;
+    transition: all 0.4s ease;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    @apply bg-white flex py-[14px] px-20  ease-smooth  shadow-xl;
+    @apply bg-white flex py-[14px] px-20  shadow-xl;
 
     @screen sm {
       @apply px-[4%];
@@ -57,6 +60,7 @@
         left: 34%;
       }
     }
+
     @screen lg {
       body.menu-open & {
         max-width: 40%;
@@ -70,9 +74,11 @@
       top: 30px;
       @apply rounded-10;
     }
+
     @screen 3xl {
       max-width: calc(100% - 16.666% - 40px); // -2 grid col
     }
+
     &.header-scroll {
       @screen 2xl {
         transform: translateY(-30px);
@@ -83,6 +89,10 @@
 
   &__logo {
     @apply mr-40;
+  }
+
+  a:not(.btn) {
+    @apply text-primary hover:text-magenta;
   }
 
   &__nav-mobile {
@@ -98,9 +108,9 @@
     transform: translateY(-100vh);
     transition: transform 0.9s;
 
-    > *:first-child {
-      padding-top: 60px;
-    }
+    // > *:first-child {
+    //   padding-top: 60px;
+    // }
 
     body.menu-open & {
       display: flex;
@@ -108,41 +118,32 @@
       justify-content: flex-start;
       transition: transform 0.3s;
       transform: translateY(0px);
+
+      .submenu.services button::after {
+        margin-left: 190px;
+      }
     }
 
     > a,
     .submenu {
       position: relative;
       width: 100%;
-      margin-bottom: 30px;
-    }
-
-    a:not(.btn),
-    button {
-      @apply font-semibold text-grey hover:text-primary;
+      margin-bottom: 20px;
     }
 
     .btn {
-      display: inline-block;
+      margin-left: 0;
+      margin-bottom: 15px;
+      width: 100%;
+      // max-width: 280px;
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
     }
 
     .submenu a {
       position: relative;
-      padding-left: 18px;
       line-height: 1.4;
-
-      &:before {
-        position: absolute;
-        content: "";
-        display: inline-block;
-        left: 0;
-        top: 5px;
-        width: 12px;
-        height: 7px;
-        background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23BCB08F"/></svg>')
-          no-repeat;
-        transform: rotate(-90deg);
-      }
     }
 
     @screen 2xl {
@@ -165,41 +166,36 @@
       display: inline-block;
       margin-right: 30px;
       white-space: nowrap;
-
-      &:hover {
-        @apply text-primary;
-      }
     }
   }
 
   .submenu {
     position: relative;
 
-    button:not(.btn-login) {
+    button {
       position: relative;
       display: flex;
       align-items: center;
-      @apply font-semibold lg:font-normal;
 
-      &:not(.connect) {
-        @apply mb-20 lg:mb-0;
-      }
-
-      @screen lg {
-        &:after {
-          content: "";
-          display: inline-block;
-          width: 12px;
-          height: 7px;
-          margin-left: 10px;
-          background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23C11794"/></svg>')
-            no-repeat;
-        }
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 7px;
+        margin-left: 20px;
+        background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23C11794"/></svg>')
+          no-repeat;
+        transition: transform 0.3s;
+        @apply ease-smooth;
       }
     }
 
     .subnav {
       padding-left: 40px;
+
+      body.menu-open & {
+        padding-top: 20px;
+      }
 
       nav {
         display: flex;
@@ -221,22 +217,25 @@
     }
 
     &:hover {
-      button:not(.btn-login) {
-        @apply text-primary;
+      button::after {
+        transform: rotate(180deg);
 
-        &:after {
-          transform: rotate(180deg);
+        body.menu-open & {
+          transform: rotate(0);
         }
       }
-
       .subnav {
-        display: block;
+        opacity: 1;
       }
     }
   }
 
   p {
     margin-bottom: 0;
+  }
+
+  &__separator {
+    @apply mb-30 mt-40 min-h-[5px] w-full rounded-20 border-b border-secondary/30 2xl:hidden;
   }
 }
 

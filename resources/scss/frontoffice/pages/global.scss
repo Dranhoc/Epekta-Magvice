@@ -19,10 +19,6 @@ section {
   position: relative;
   @apply py-80 md:py-120;
 
-  // &:first-of-type {
-  //   margin-top: var(--header-height);
-  // }
-
   .s-bg {
     position: absolute;
     top: 0;
