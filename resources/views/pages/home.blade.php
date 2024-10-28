@@ -12,8 +12,8 @@
         <h1>Sécurisez vos données et optimiser l’efficacité de vos collaborateurs</h1>
         <h6 class="lg:w-[60%] xl:w-full">Magvice est votre partenaire IT, expert belge en solutions de parcs informatiques,
           en gestion de réseaux et en
-          cybersécrurité.</h6>
-        <button class="btn btn--secondary btn--hero">Voir les images Magvice</button>
+          cybersécurité.</h6>
+        <button class="btn btn--secondary btn--hero mt-30">Voir les services Magvice</button>
       </div>
     </div>
 
@@ -23,12 +23,14 @@
   <section class="p-0">
     <div class="lg:d-grid container">
 
-      <div class="card-gradient-border card-gradient-border--floating full-w-mobile">
+      <div class="card-gradient-border card-gradient-border--floating full-w-mobile !ml-0">
         <div class="card-gradient-border__content">
           <h3>Vous êtes victime d’un piratage informatique&nbsp;?</h3>
           <div class="deco-gradient"></div>
           <p>Contactez-nous sans plus tarder et lancer le plan sauvetage de Magvice.</p>
-          <a href="/" class="btn">Appel d’urgence 0000 00 00 00</a>
+          <div class="mx-auto mt-30 flex w-full justify-center lg:justify-start"><a href="/" class="btn">Appel
+              d’urgence 0000 00 00
+              00</a></div>
         </div>
       </div>
 
@@ -87,7 +89,7 @@
 
 
       <div class="flex flex-col gap-x-80 lg:col-span-12 lg:flex-row xl:col-span-10 xl:col-start-2">
-        <div class="mt-80 lg:mt-0 lg:w-1/3">
+        <div class="lg:w-1/3">
           <figure class="mb-20">@svg('frontoffice.pages.home.password')</figure>
           <h4>Profitez des services gérés de Magvice</h4>
           <p>Economiser de l’argent et du temps en fournissant à votre entreprise un environnement sûr pour héberger vos
@@ -182,7 +184,7 @@
             <p class="mt-25">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
               elementum
               tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-            <button class="btn md:mt-40">En savoir plus sur Gaétan</button>
+            <button class="btn hidden md:mt-40 lg:flex">En savoir plus sur Gaétan</button>
           </div>
           <div class="md:w-1/2">
             <figure class="mb-20">@svg('frontoffice.pages.home.light-alert')</figure>
@@ -190,6 +192,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
               elementum
               tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+            <button class="btn mt-30 lg:hidden">En savoir plus sur Gaétan</button>
           </div>
         </div>
 
@@ -204,8 +207,9 @@
 
       <div class="col-span-12 3xl:col-span-10 3xl:col-start-2">
         <figure class="flex justify-center">
-          <iframe class="aspect-[150/73] w-full rounded-20 shadow-xl" src="https://www.youtube.com/embed/L8E7cZWBuq8"
-            title="Voici Le Plus Grand Data Center Au Monde" frameborder="0"
+          <iframe class="aspect-[150/73] min-h-[320px] w-full rounded-20 shadow-xl"
+            src="https://www.youtube.com/embed/L8E7cZWBuq8" title="Voici Le Plus Grand Data Center Au Monde"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </figure>
@@ -377,7 +381,7 @@
                   elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
                   libero
                   vitae erat."</h6>
-                <div class="flex h-60 items-center justify-center gap-x-20">
+                <div class="mt-40 flex h-60 items-center justify-center gap-x-20">
                   <figure><img src="{{ asset('/images/home/avatar1.png') }}" alt="avatar of Gaétan" loading="lazy">
                   </figure>
                   <div class="flex flex-col justify-center text-left">
@@ -410,7 +414,7 @@
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-dyk py-30 lg:py-90">
+  <section class="s-dyk py-80 lg:py-90">
     <div class="lg:d-grid container">
 
       <div class="col-span-6 3xl:col-span-5 3xl:col-start-2">
@@ -461,20 +465,22 @@
         <p class="title-7 text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
         </p>
-        <form action="">
-          <div class="mt-40 flex flex-wrap items-center justify-center gap-20">
-            <input class="max-w-[400px] !rounded-10 !p-[12px] !text-grey" type="email"
-              placeholder="Entrez votre e-mail">
-            <button class="btn">S'inscrire</button>
+        <form action="submit">
+          <div class="flex flex-col justify-center gap-x-20 sm:flex-row">
+            <div class="mt-40 flex flex-col gap-20 sm:items-center sm:justify-center">
+              <input class="lg:w-400 max-w-[400px] !rounded-10 !p-[12px] !text-grey" type="email"
+                placeholder="Entrez votre e-mail">
+              <div class="flex gap-10">
+                <input class="rounded-[5px] !border-2 !border-bluelight p-2" type="checkbox" name="privacy">
+                <label class="text-[13px]"for="privacy">Vous acceptez notre
+                  <a href="/" class="underline"> politique de confidentialité</a>
+                </label>
+              </div>
+            </div>
+            <button class="btn mt-40 block h-[fit-content] w-[fit-content]">S'inscrire</button>
           </div>
+        </form>
       </div>
-      <div class="col-span-4 col-start-5 mt-20 flex items-center gap-10">
-        <input class="rounded-[5px] !border-2 !border-bluelight p-2" type="checkbox" name="privacy">
-        <label for="privacy">Vous acceptez notre
-          <a href="/" class="underline"> politique de confidentialité</a>
-        </label>
-      </div>
-      </form>
 
   </section>
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>

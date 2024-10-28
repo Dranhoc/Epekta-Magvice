@@ -100,6 +100,7 @@
       @apply text-secondary mb-15;
     }
   }
+
   .btn {
     position: relative;
     display: inline-flex;
@@ -114,18 +115,10 @@
     text-decoration: none;
     transition: all 0.3s ease;
 
-    @screen lg {
-      text-align: left;
-    }
-
     &:hover,
     &:focus {
       background-image: var(--gradient);
       @apply text-white;
-
-      // svg path {
-      //   @apply stroke-white;
-      // }
     }
 
     &--secondary {

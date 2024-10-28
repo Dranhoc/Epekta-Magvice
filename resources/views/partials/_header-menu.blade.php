@@ -1,4 +1,9 @@
-<nav class="{{ $mobile ? 'g-header__nav-mobile' : 'g-header__nav  !hidden 2xl:!flex' }}">
+<nav class="{{ $mobile ? 'g-header__nav-mobile' : 'g-header__nav ' }}">
+  {{-- <figure class="g-header__logo {{ $mobile ?: 'hidden' }}">
+    <a href="/">
+      @svg('logo', 'logo')
+    </a>
+  </figure> --}}
   <a href="#about">À&nbsp;propos</a>
   <div class="submenu">
     <button class="title-secondary">Services</button>

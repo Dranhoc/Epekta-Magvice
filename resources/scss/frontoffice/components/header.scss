@@ -18,13 +18,14 @@
     }
   }
 }
+
 .bg-header {
   position: fixed;
   top: 0;
   height: 81px;
   width: 100%;
   z-index: 100;
-  @apply bg-white ease-smooth border-b border-custom-grey;
+  @apply bg-white ease-smooth border-b border-custom-grey hidden 2xl:block;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: clip-path 0.5s;
 
@@ -37,60 +38,76 @@
   &__content {
     position: fixed;
     margin-inline: auto;
-    top: 30px;
-    left: 0px;
-    right: 0px;
+    top: 0px;
+    left: 0;
+    right: 0;
     z-index: 100;
     transform: translateY(0px);
-    transition:
-      transform 0.5s,
-      padding 0.5s;
-    @apply bg-white rounded-10 flex w-full py-[14px] px-20 sm:px-60 ease-smooth;
+    transition: all 0.4s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @apply bg-white flex py-[14px] px-20  ease-smooth  shadow-xl;
 
-    max-width: calc(100% - 40px);
     @screen sm {
+      @apply px-[4%];
+      body.menu-open & {
+        max-width: 66%;
+        margin: 0;
+        right: 0px;
+        left: 34%;
+      }
+    }
+    @screen lg {
+      body.menu-open & {
+        max-width: 40%;
+        left: 60%;
+      }
+    }
+
+    @screen 2xl {
       max-width: calc(100% - 80px);
+      width: 100%;
+      top: 30px;
+      @apply rounded-10;
     }
     @screen 3xl {
       max-width: calc(100% - 16.666% - 40px); // -2 grid col
     }
     &.header-scroll {
-      transform: translateY(-30px);
-      @apply py-[17px] px-0;
+      @screen 2xl {
+        transform: translateY(-30px);
+        @apply py-[17px] px-0 shadow-none;
+      }
     }
   }
 
   &__logo {
-    @apply mr-70 lg:mr-40;
+    @apply mr-40;
   }
 
   &__nav-mobile {
     position: fixed;
-    top: var(--header-height);
-    left: 0;
-    height: calc(100vh - var(--header-height));
+    top: 0px;
+    left: 0px;
+    height: 100vh;
     width: 100vw;
-    display: none;
-    @apply p-35 bg-white;
+    z-index: -1;
+    @apply p-35  bg-white ease-smooth sm:w-full;
     overflow-y: scroll;
     overflow-x: hidden;
+    transform: translateY(-100vh);
+    transition: transform 0.9s;
 
-    @screen xl {
-      body.menu-open & {
-        display: grid !important;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        align-items: start;
-
-        > * {
-          @apply col-span-3;
-        }
-      }
+    > *:first-child {
+      padding-top: 60px;
     }
 
     body.menu-open & {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      transition: transform 0.3s;
+      transform: translateY(0px);
     }
 
     > a,
@@ -128,7 +145,7 @@
       }
     }
 
-    @screen lg {
+    @screen 2xl {
       display: none;
     }
   }
@@ -138,7 +155,7 @@
     display: none;
     width: 100%;
 
-    @screen lg {
+    @screen 2xl {
       display: flex;
       align-items: center;
     }
@@ -192,13 +209,13 @@
         a {
           display: block;
 
-          @screen lg {
+          @screen 2xl {
             white-space: nowrap;
           }
         }
       }
 
-      @screen lg {
+      @screen 2xl {
         @include subNavDesktop;
       }
     }
@@ -231,6 +248,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  margin-block: auto;
 
   @screen 2xl {
     display: none;
@@ -239,23 +257,21 @@
   span {
     display: inline-block;
     width: 100%;
-    height: 2px;
-    border-top: 2px solid #707070;
+    height: 4px;
     transition: all 0.12s linear;
-
-    &:last-child {
-      width: 20px;
-    }
+    @apply bg-primary;
   }
 }
 
 body.menu-open {
   overflow: hidden;
-
+  .menu-burger {
+    width: 25px;
+  }
   .menu-burger span {
     &:first-child {
       transform-origin: 50% 50%;
-      transform: rotate(45deg) translateY(10px) translateX(10px);
+      transform: rotate(45deg) translateY(7.5px) translateX(6px);
     }
 
     &:nth-child(2) {
@@ -264,8 +280,7 @@ body.menu-open {
 
     &:last-child {
       transform-origin: 50% 50%;
-      transform: rotate(-45deg) translateY(-10px) translateX(10px);
-      width: 100%;
+      transform: rotate(-45deg) translateY(-12.5px) translateX(10px);
     }
   }
 }

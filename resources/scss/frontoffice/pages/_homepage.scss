@@ -40,7 +40,7 @@
 
     img {
       aspect-ratio: 1/1;
-      min-width: 320px;
+      min-width: 300px;
       max-width: 450px;
       border-radius: 50%;
       object-fit: cover;
@@ -54,6 +54,9 @@
 .s-services {
   h4 {
     margin-bottom: 25px;
+  }
+  figure img {
+    min-height: 420px;
   }
 }
 

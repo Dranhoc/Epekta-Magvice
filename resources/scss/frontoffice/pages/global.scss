@@ -38,6 +38,22 @@ section {
   }
 }
 
+body.menu-open {
+  &::after {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: var(--gradient-vertical);
+    opacity: 0.8;
+    z-index: 99;
+    @apply backdrop-blur-xl;
+  }
+}
+
 .s-hero {
   @apply relative text-white;
   // min-height: 60vh;
@@ -118,7 +134,7 @@ section {
     border-radius: 20px;
     text-align: left;
     background: white;
-    padding: 40px 10px;
+    padding: 40px 0;
     @screen sm {
       padding: 40px;
     }
@@ -135,6 +151,10 @@ section {
       max-width: 550px;
       border-radius: 20px;
     }
+    @screen xl {
+      right: calc(8.33% + 40px);
+    }
+
     @screen 3xl {
       right: calc(12.5% + 40px); //1.5 grid col + margin
     }
@@ -142,6 +162,7 @@ section {
   &--prices {
     @screen lg {
       top: -450px;
+      right: 0px;
     }
     @screen 3xl {
       right: calc(8.333% + 40px); //1 grid col + margin
@@ -169,7 +190,7 @@ section {
   @media (max-width: 1023px) {
     width: 100vw;
   }
-  @apply -mr-20 sm:-mr-40;
+  @apply -ml-20 sm:-ml-40 lg:ml-0;
 }
 
 .border-l-gradient {

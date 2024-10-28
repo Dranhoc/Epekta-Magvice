@@ -1,26 +1,21 @@
 <div class="bg-header"></div>
 <header class="g-header">
-  <div class="g-header__content">
+  <div class="g-header__content justify-between 2xl:justify-start">
 
-
-    <div class="flex w-full">
+    <figure class="g-header__logo">
       <a href="/">
-        <figure class="g-header__logo">
-          @svg('logo', 'logo')
-        </figure>
+        @svg('logo', 'logo')
       </a>
+    </figure>
 
-      @include('partials._header-menu', ['mobile' => false])
-    </div>
+    @include('partials._header-menu', ['mobile' => false])
+    @include('partials._header-menu', ['mobile' => true])
 
     <button class="menu-burger">
       <span></span>
       <span></span>
       <span></span>
     </button>
-
-
-    @include('partials._header-menu', ['mobile' => true])
 
   </div>
 </header>
