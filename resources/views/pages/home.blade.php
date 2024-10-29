@@ -58,7 +58,7 @@
         @svg('frontoffice.pages.home.logo')
       </div>
 
-      <div class="col-span-5 col-start-2 mt-80 lg:mt-60 lg:pr-20">
+      <div id="service-1" class="col-span-5 col-start-2 mt-80 lg:mt-60 lg:pr-20">
         <figure class="mb-20">@svg('frontoffice.pages.home.security')</figure>
         <h4>Assurez la conformité de sécurité de votre infrastructure</h4>
         <p>Le but est d’aider les entreprises à renforcer la sécurité de leurs datacenters (serveurs/données/applications,
@@ -69,7 +69,7 @@
         </div>
       </div>
 
-      <div class="col-span-5 mt-80 lg:mt-100">
+      <div id="service-2" class="col-span-5 mt-80 lg:mt-100">
         <figure class="mb-20">@svg('frontoffice.pages.home.user')</figure>
         <h4>Améliorez les compétences de votre équipe avec des solutions modernes et hybrides</h4>
         <p>Permettre aux collaborateurs de travailler de n’importe où à tout moment d’une manière sécurisée et optimisée.
@@ -88,7 +88,7 @@
       </div>
 
 
-      <div class="flex flex-col gap-x-80 lg:col-span-12 lg:flex-row xl:col-span-10 xl:col-start-2">
+      <div id="service-3" class="flex flex-col gap-x-80 lg:col-span-12 lg:flex-row xl:col-span-10 xl:col-start-2">
         <div class="lg:w-1/3">
           <figure class="mb-20">@svg('frontoffice.pages.home.password')</figure>
           <h4>Profitez des services gérés de Magvice</h4>
@@ -96,7 +96,7 @@
             services et applications.</p>
           <button class="btn">Voir les services gérés</button>
         </div>
-        <div class="mt-80 lg:mt-0 lg:w-1/3">
+        <div id="service-4" class="mt-80 lg:mt-0 lg:w-1/3">
           <figure class="mb-20">@svg('frontoffice.pages.home.web-security')</figure>
           <h4>Mise en place du matériel et conception de réseaux</h4>
           <p>Aider les entreprises à concevoir des réseaux WiFi optimaux, à construire de grands réseaux câblés, à
@@ -104,7 +104,7 @@
             leur datacenter et à fournir...</p>
           <button class="btn">Voir le support matériel</button>
         </div>
-        <div class="mt-80 lg:mt-0 lg:w-1/3">
+        <div id="service-5" class="mt-80 lg:mt-0 lg:w-1/3">
           <figure class="mb-20">@svg('frontoffice.pages.home.light-alert')</figure>
           <h4>Récupérez vos données après sinistre</h4>
           <p>S’assurer, qu’en cas de catastrophe, d’être toujours en mesure de fonctionner correctement dans un minimum de

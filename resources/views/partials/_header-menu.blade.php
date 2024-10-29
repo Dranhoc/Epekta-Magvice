@@ -20,7 +20,7 @@
   <button class="btn btn--secondary ml-auto mt-10 2xl:mt-0" href="/contact">Assistance à distance</button>
   <button class="btn" href="/contact">Contact</button>
   <div class="submenu">
-    <button class="title-secondary">FR</button>
+    <button class="title-secondary !mr-0">FR</button>
     <div class="subnav">
       <nav>
         <a href="/">NL</a>
