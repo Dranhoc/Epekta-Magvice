@@ -248,6 +248,10 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-block: auto;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @screen 2xl {
     display: none;
@@ -264,9 +268,7 @@
 
 body.menu-open {
   overflow: hidden;
-  .menu-burger {
-    // width: 25px;
-  }
+
   .menu-burger span {
     &:first-child {
       transform-origin: 50% 50%;

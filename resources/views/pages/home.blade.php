@@ -54,7 +54,7 @@
           éviter une
           faillite éventuelle à votre entreprise !</p>
       </div>
-      <div class="col-span-2 col-start-9 my-40 lg:my-0">
+      <div class="col-span-3 col-start-9 my-40 flex lg:my-0 lg:justify-end">
         @svg('frontoffice.pages.home.logo')
       </div>
 
