@@ -4,6 +4,7 @@ import { footerInit } from './components/footer';
 import { initForms } from './components/forms';
 import { initAccordions } from './components/accordions';
 import { toggleModals } from './components/modals';
+import { scrollToAnchor } from './components/scroll-to-anchor';
 
 window.addEventListener('DOMContentLoaded', () => {
   headerHeight();
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   toggleModals();
   animationHeader();
+  scrollToAnchor();
 });
 
 window.addEventListener('resize', () => {

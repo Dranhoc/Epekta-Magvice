@@ -8,9 +8,18 @@ export function headerHeight() {
 
 export function toggleMenu() {
   const burger = document.querySelector('.menu-burger') as HTMLElement;
+  const headerElements = document.querySelectorAll(
+    '.g-header__nav-mobile a, .g-header__nav-mobile button'
+  ) as NodeListOf<HTMLElement>;
 
   burger?.addEventListener('click', () => {
     document.body.classList.toggle('menu-open');
+  });
+
+  headerElements.forEach((element) => {
+    element.addEventListener('click', () => {
+      document.body.classList.remove('menu-open');
+    });
   });
 }
 

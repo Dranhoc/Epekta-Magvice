@@ -414,7 +414,7 @@
   <div class="deco-ellipse deco-ellipse--bottom">@svg('frontoffice.deco-ellipse')</div>
 
 
-  <section class="s-dyk py-80 lg:py-90">
+  <section id="blog" class="s-dyk py-80 lg:py-90">
     <div class="lg:d-grid container">
 
       <div class="col-span-6 3xl:col-span-5 3xl:col-start-2">

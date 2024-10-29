@@ -5,11 +5,11 @@
     <button class="title-secondary">Services</button>
     <div class="subnav">
       <nav>
-        <a href="/">Mise en conformité</a>
-        <a href="/">Gestion du réseau</a>
-        <a href="/">Services gérés</a>
-        <a href="/">Matériel informatique</a>
-        <a href="/">Garantie Magvice</a>
+        <a href="#service-1">Mise en conformité</a>
+        <a href="#service-2">Gestion du réseau</a>
+        <a href="#service-3">Services gérés</a>
+        <a href="#service-4">Matériel informatique</a>
+        <a href="#service-5">Garantie Magvice</a>
       </nav>
     </div>
   </div>
