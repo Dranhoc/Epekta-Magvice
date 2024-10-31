@@ -10,7 +10,7 @@ footer {
   .container {
     position: relative;
     width: 100%;
-    max-width: 1920px;
+    max-width: 1920px !important;
     margin: 0 auto !important;
   }
 }
@@ -44,6 +44,7 @@ body.menu-open {
     height: 100vh;
     pointer-events: none;
     background: var(--gradient-vertical);
+    pointer-events: none;
     opacity: 0.8;
     z-index: 99;
     @apply backdrop-blur-xl;

@@ -7,13 +7,16 @@ export function headerHeight() {
 }
 
 export function toggleMenu() {
-  const burger = document.querySelector('.menu-burger') as HTMLElement;
+  const burgers = document.querySelectorAll('.menu-burger') as NodeListOf<HTMLElement>;
   const headerElements = document.querySelectorAll(
     '.g-header__nav-mobile a, .g-header__nav-mobile button'
   ) as NodeListOf<HTMLElement>;
 
-  burger?.addEventListener('click', () => {
-    document.body.classList.toggle('menu-open');
+  burgers?.forEach((burger) => {
+    burger.addEventListener('click', () => {
+      document.body.classList.toggle('menu-open');
+      document.body.classList.remove('header-scroll');
+    });
   });
 
   headerElements.forEach((element) => {
@@ -25,18 +28,14 @@ export function toggleMenu() {
 
 export function animationHeader() {
   let lastScrollY = 0;
-  const headerContent = document.querySelector('.g-header__content') as HTMLElement;
-  const bgHeader = document.querySelector('.bg-header') as HTMLElement;
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY && currentScrollY > 200) {
-      headerContent.classList.add('header-scroll');
-      bgHeader.classList.add('header-scroll');
+      document.body.classList.add('header-scroll');
     } else {
-      headerContent.classList.remove('header-scroll');
-      bgHeader.classList.remove('header-scroll');
+      document.body.classList.remove('header-scroll');
     }
 
     lastScrollY = currentScrollY;

@@ -1,241 +1,126 @@
-@mixin subNavDesktop {
-  position: absolute;
-  top: 100%;
-  padding-top: 31px;
-  left: -20px;
-  opacity: 0;
-  padding-left: 0;
-  transition:
-    opacity 0.5s,
-    transform 0.3s;
-  @apply ease-smooth;
-  nav {
-    padding: 20px;
-    border-radius: 20px;
-    @apply bg-white text-primary shadow-xl;
-
-    a {
-      &:before {
-        display: none;
-      }
-    }
+@mixin linksNav {
+  a:not(.btn),
+  button:not(.btn) {
+    @apply text-primary hover:text-magenta transition-colors duration-200 title-secondary;
   }
 }
 
 .bg-header {
   position: fixed;
-  top: 0;
-  height: 81px;
+  top: 30px;
+  height: 77px;
   width: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgb(228, 228, 228);
   z-index: 100;
-  @apply bg-white ease-smooth border-b border-custom-grey hidden 2xl:block;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: clip-path 0.5s;
+  transform: scale(0);
+  transition:
+    transform 0.5s ease,
+    top 0.5s ease;
 
-  &.header-scroll {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  body.header-scroll & {
+    transform: scale(1);
+    top: 0;
+    @apply shadow-md;
+  }
+  body.menu-open & {
+    transform: scale(0);
+    top: -100px;
   }
 }
 
 .g-header {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: top 0.5s ease;
+  @include linksNav();
+
+  body.header-scroll & {
+    top: 0px;
+  }
+  body.menu-open & {
+    top: -200px;
+  }
+
   &__content {
-    position: fixed;
-    margin-inline: auto;
-    top: 0px;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    transform: translateY(0px);
-    transition: all 0.4s ease;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    @apply bg-white flex py-[14px] px-20  shadow-xl;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 4%;
+    transition:
+      padding 0.8s ease,
+      border-radius 0.8s ease;
 
-    @screen sm {
-      @apply px-[4%];
-      body.menu-open & {
-        max-width: 66%;
-        margin: 0;
-        right: 0px;
-        left: 34%;
-      }
-    }
+    @apply bg-white shadow-xl rounded-10  2xl:mx-auto;
 
-    @screen lg {
-      body.menu-open & {
-        max-width: 40%;
-        left: 60%;
-      }
-    }
-
-    @screen 2xl {
-      max-width: calc(100% - 80px);
-      width: 100%;
-      top: 30px;
-      @apply rounded-10;
-    }
-
-    @screen 3xl {
-      max-width: calc(100% - 16.666% - 40px); // -2 grid col
-    }
-
-    &.header-scroll {
-      @screen 2xl {
-        transform: translateY(-30px);
-        @apply py-[17px] px-0 shadow-none;
-      }
-    }
-  }
-
-  &__logo {
-    @apply mr-40;
-  }
-
-  a:not(.btn) {
-    @apply text-primary hover:text-magenta;
-  }
-
-  &__nav-mobile {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-    @apply p-35  bg-white ease-smooth sm:w-full;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transform: translateY(-100vh);
-    transition: transform 0.9s;
-
-    // > *:first-child {
-    //   padding-top: 60px;
-    // }
-
-    body.menu-open & {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      transition: transform 0.3s;
-      transform: translateY(0px);
-
-      .submenu.services button::after {
-        margin-left: 190px;
-      }
-    }
-
-    > a,
-    .submenu {
-      position: relative;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      margin-left: 0;
-      margin-bottom: 15px;
-      width: 100%;
-      // max-width: 280px;
-      &:last-of-type {
-        margin-bottom: 30px;
-      }
-    }
-
-    .submenu a {
-      position: relative;
-      line-height: 1.4;
-    }
-
-    @screen 2xl {
-      display: none;
+    body.header-scroll & {
+      padding: 15px 0%;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      @apply shadow-none;
     }
   }
 
   &__nav {
-    position: relative;
     display: none;
+    justify-content: space-between;
     width: 100%;
+    @apply 2xl:flex;
+  }
 
-    @screen 2xl {
-      display: flex;
-      align-items: center;
-    }
+  &__subnav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 
-    a,
-    button {
-      display: inline-block;
-      margin-right: 30px;
-      white-space: nowrap;
-    }
+  &__logo {
+    @apply sm:mr-40;
   }
 
   .submenu {
     position: relative;
-
-    button {
-      position: relative;
+    &__subnav {
+      position: absolute;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: white;
+      top: 70px;
+      left: -20px;
+      transform: translateX(-40px);
+      transform: scaleY(0);
+      transform-origin: 100% 0%;
+      margin-top: -50px;
+      padding-top: 40px;
+      transition:
+        transform 0.2s ease,
+        scale 0.2s ease;
 
-      &:after {
-        content: "";
-        display: inline-block;
-        width: 12px;
-        height: 7px;
-        margin-left: 20px;
-        background: url('data:image/svg+xml;utf8,<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9058 4.71704L10.3708 0.249044C10.4489 0.170433 10.5417 0.108044 10.644 0.0654697C10.7463 0.0228954 10.856 0.000976562 10.9668 0.000976562C11.0776 0.000976562 11.1873 0.0228954 11.2896 0.0654697C11.3919 0.108044 11.4847 0.170433 11.5628 0.249044C11.7213 0.408494 11.8103 0.624201 11.8103 0.849045C11.8103 1.07389 11.7213 1.2896 11.5628 1.44904L6.5038 6.51104C6.35035 6.66433 6.14366 6.75249 5.92682 6.75715C5.70997 6.7618 5.49969 6.6826 5.3398 6.53604L0.245798 1.44704C0.0866682 1.28898 -0.00315137 1.07417 -0.00390151 0.849873C-0.00465166 0.625579 0.0837289 0.410174 0.241798 0.251044C0.399867 0.0919144 0.614676 0.00209483 0.83897 0.00134468C1.06326 0.000594535 1.27867 0.0889755 1.4378 0.247045L5.9058 4.71704Z" fill="%23C11794"/></svg>')
-          no-repeat;
-        transition: transform 0.3s;
-        @apply ease-smooth;
+      &--services {
+        width: 190px;
       }
     }
-
-    .subnav {
-      padding-left: 40px;
-
-      body.menu-open & {
-        padding-top: 20px;
-      }
-
-      nav {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        a {
-          display: block;
-
-          @screen 2xl {
-            white-space: nowrap;
-          }
-        }
-      }
-
-      @screen 2xl {
-        @include subNavDesktop;
+    &__button {
+      position: relative;
+      @apply title-secondary flex gap-10 items-center;
+      svg {
+        transform: rotate(90deg);
+        transition: transform 0.2s ease;
       }
     }
-
     &:hover {
-      button::after {
-        transform: rotate(180deg);
-
-        body.menu-open & {
-          transform: rotate(0);
-        }
+      .submenu__subnav {
+        transform: scaleY(1);
       }
-      .subnav {
-        opacity: 1;
+      .submenu__button svg {
+        transform: rotate(-90deg);
       }
     }
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  &__separator {
-    @apply mb-30 mt-40 min-h-[5px] w-full rounded-20 border-b border-secondary/30 2xl:hidden;
   }
 }
 
@@ -282,6 +167,84 @@ body.menu-open {
     &:last-child {
       transform-origin: 50% 50%;
       transform: rotate(-45deg) translateY(-10px) translateX(4px) scale(0.7);
+    }
+  }
+}
+
+.nav-mobile {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  z-index: 150;
+  transform: translateX(500px);
+  transition: transform 0.5s ease;
+  @apply bg-white;
+  @include linksNav();
+
+  body.menu-open & {
+    transform: translateX(0px);
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    padding: 15px 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+    @apply shadow-md;
+  }
+
+  &__subnav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .submenu {
+    &:hover {
+      .submenu__button.closed svg {
+        transform: rotate(-90deg);
+      }
+      .submenu__subnav.closed {
+        transform: scaleY(1);
+      }
+    }
+
+    &__button {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      svg {
+        transform: rotate(90deg);
+        transition: transform 0.2s ease;
+      }
+    }
+
+    &__button.closed {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+
+    &__subnav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 20px;
+      padding-left: 20px;
+
+      &.closed {
+        transform: scaleY(0);
+        transform-origin: 100% 0%;
+        transition: transform 0.3s ease;
+      }
     }
   }
 }
