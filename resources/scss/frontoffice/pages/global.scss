@@ -132,6 +132,7 @@ body.menu-open {
     text-align: left;
     background: white;
     padding: 40px 0;
+
     @screen sm {
       padding: 40px;
     }
@@ -148,6 +149,7 @@ body.menu-open {
       max-width: 550px;
       border-radius: 20px;
     }
+
     @screen xl {
       right: calc(8.33% + 40px);
     }
@@ -161,6 +163,7 @@ body.menu-open {
       top: -450px;
       right: 0px;
     }
+
     @screen 3xl {
       right: calc(8.333% + 40px); //1 grid col + margin
     }
@@ -184,10 +187,11 @@ body.menu-open {
 }
 
 .full-w-mobile {
+  @apply -ml-20 sm:-ml-40 lg:ml-0;
+
   @media (max-width: 1023px) {
     width: 100vw;
   }
-  @apply -ml-20 sm:-ml-40 lg:ml-0;
 }
 
 .border-l-gradient {

@@ -10,6 +10,7 @@
       </figure>
 
       <nav class="g-header__nav">
+
         <div class="g-header__subnav">
           <a href="#about">À&nbsp;propos</a>
           <div class="submenu">
@@ -39,6 +40,7 @@
             </nav>
           </div>
         </div>
+
       </nav>
 
       <button class="menu-burger">

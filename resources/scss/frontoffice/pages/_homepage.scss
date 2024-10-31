@@ -3,6 +3,7 @@
     padding-block: calc(150px - 30px);
     height: 300px;
     min-height: 0px;
+
     @screen lg {
       padding-block: calc(250px - 50px);
       height: 500px;
@@ -68,8 +69,8 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
   @apply lg:flex-row gap-y-40;
+
   div {
     height: fit-content;
     padding-left: 30px;
@@ -106,10 +107,11 @@
 
 .s-prices {
   &__content {
+    @apply xl:w-1/2;
+    
     @screen lg {
       width: calc(50% - 50px);
     }
-    @apply xl:w-1/2;
   }
 }
 
@@ -129,6 +131,7 @@
 
   figure {
     min-width: 33.3%;
+
     img {
       aspect-ratio: 1/1;
       width: 100%;
@@ -169,6 +172,7 @@
       border-top-left-radius: 0px;
       box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
       @apply text-purple;
+      
       @screen sm {
         width: calc(100% - 12%);
       }
