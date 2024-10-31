@@ -5,41 +5,44 @@
   }
 }
 
-.bg-header {
-  position: fixed;
-  top: 30px;
-  height: 77px;
-  width: 100%;
-  background-color: white;
-  border-bottom: 1px solid rgb(228, 228, 228);
-  z-index: 100;
-  transform: scale(0);
-  transition:
-    transform 0.5s ease,
-    top 0.5s ease;
+// .bg-header {
+//   position: fixed;
+//   top: 30px;
+//   height: 77px;
+//   width: 100%;
+//   background-color: white;
+//   border-bottom: 1px solid rgb(228, 228, 228);
+//   z-index: 100;
+//   transform: scale(0);
+//   transition:
+//     transform 0.2s ease,
+//     top 0.3s ease;
 
-  body.header-scroll & {
-    transform: scale(1);
-    top: 0;
-    @apply shadow-md;
-  }
-  body.menu-open & {
-    transform: scale(0);
-    top: -100px;
-  }
-}
+//   body.header-scroll & {
+//     transform: scale(1);
+//     top: 0;
+//     @apply shadow-md;
+//   }
+//   body.menu-open & {
+//     transform: scale(0);
+//     top: -100px;
+//   }
+// }
 
 .g-header {
   position: fixed;
   top: 30px;
-  left: 0;
-  right: 0;
+  min-width: 100%;
   z-index: 100;
-  transition: top 0.5s ease;
+  transition:
+    top 0.3s ease,
+    background-color 0.1s ease;
   @include linksNav();
 
   body.header-scroll & {
     top: 0px;
+    background-color: white;
+    @apply shadow-md;
   }
   body.menu-open & {
     top: -200px;
@@ -48,10 +51,11 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    width: calc(100% + 20px);
     padding: 12px 4%;
     transition:
-      padding 0.8s ease,
-      border-radius 0.8s ease;
+      padding 0.5s ease,
+      border-radius 0.5s ease;
 
     @apply bg-white shadow-xl rounded-10  2xl:mx-auto;
 

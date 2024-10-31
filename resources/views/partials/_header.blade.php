@@ -1,8 +1,8 @@
-<div class="bg-header"></div>
+{{-- <div class="bg-header"></div> --}}
 <header class="g-header">
-  <div class="container">
+  <div class="lg:d-grid container">
 
-    <div class="g-header__content">
+    <div class="g-header__content col-span-12">
       <figure class="g-header__logo">
         <a href="/">
           @svg('logo', 'logo')

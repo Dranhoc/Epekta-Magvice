@@ -41,15 +41,20 @@
             </div>
           </li>
         </ul>
-        <div class="flex gap-20">
-          <button class="btn mt-20">Primary button</button>
-          <button class="btn btn--secondary mt-20">Secondary button</button>
+
+        <div class="mt-20 flex gap-20">
+          <button class="btn">Primary button</button>
+          <button class="btn btn--secondary">Secondary button</button>
         </div>
 
+        <div class="my-20 flex gap-20">
+          <div class="test-button">Super button</div>
+          <button class="test-button">Super button</button>
+        </div>
+
+        <div class="md:col-span-6">
+          <img src="{{ asset('/images/placeholder.jpg') }}" alt="Lake">
+        </div>
       </div>
-      <div class="md:col-span-6">
-        <img src="{{ asset('/images/placeholder.jpg') }}" alt="Lake">
-      </div>
-    </div>
   </section>
 @endsection
