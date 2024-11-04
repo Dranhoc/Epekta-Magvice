@@ -1,40 +1,50 @@
 :root {
   --border-size: 3px;
   --border-angle: 0turn;
-  --main-bg: conic-gradient(from var(--border-angle), #854df1, #16d0fb 5%, #854df1 60%, #c11794 95%);
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #16d0fb, #c11794 99%, transparent);
+  --main-bg: conic-gradient(from var(--border-angle), #854df1, #16d0fb 33%, #c11794 66%, #854df1 100%);
 }
+
 .test-button {
   position: relative;
   display: flex;
   padding: 8px 20px;
   border-radius: 100px;
-  color: white;
-  z-index: 1;
+  color: black;
+  background-color: transparent;
+  font-weight: 500;
+  z-index: 0;
 
   &:hover::before {
-    animation: bg-spin 3s linear infinite;
+    animation: bg-spin 2s linear infinite;
   }
 
   &::before {
     position: absolute;
     content: "";
-    inset: 0px;
+    inset: -5px;
     z-index: -1;
     border-radius: 100px;
-    border: solid 3px transparent;
+    border: solid 5px transparent;
+    //--gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #16d0fb, #c11794 99%, transparent);
+    --gradient-border: conic-gradient(
+      from var(--border-angle),
+      transparent 10%,
+      #16d0fb,
+      #854df1 45%,
+      #c11794 75%,
+      transparent 100%
+    );
 
-    background: 
-    // padding-box clip this background in to the overall element except the border.
+    background:
       var(--main-bg) padding-box,
-      // border-box extends this background to the border space
       var(--gradient-border) border-box,
-      // Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background.
       var(--main-bg) border-box;
     background-position: center center;
     background-repeat: no-repeat;
-    animation: bg-spin 3s linear infinite;
-    // animation-play-state: paused;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
   }
 }
 
@@ -48,39 +58,4 @@
   to {
     --border-angle: 1turn;
   }
-}
-
-.box-wrapper {
-  background: #223;
-  height: 500px;
-  // .box {
-  //   --border-size: 3px;
-  //   --border-angle: 0turn;
-  //   width: 300px;
-  //   height: 200px;
-  //   background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213),
-  //     conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
-  //   background-size:
-  //     calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
-  //     cover;
-  //   background-position: center center;
-  //   background-repeat: no-repeat;
-
-  //   animation: bg-spin 3s linear infinite;
-  //   @keyframes bg-spin {
-  //     to {
-  //       --border-angle: 1turn;
-  //     }
-  //   }
-
-  //   &:hover {
-  //     animation-play-state: paused;
-  //   }
-  // }
-
-  // @property --border-angle {
-  //   syntax: "<angle>";
-  //   inherits: true;
-  //   initial-value: 0turn;
-  // }
 }

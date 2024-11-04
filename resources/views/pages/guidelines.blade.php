@@ -48,7 +48,7 @@
         </div>
 
         <div class="my-20 flex gap-20">
-          <div class="test-button">Super button</div>
+          <a href="/guidelines" class="test-button">Super button</a>
           <button class="test-button">Super button</button>
         </div>
 
