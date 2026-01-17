@@ -1,64 +1,67 @@
-# Armarius CMS
+# Magvice — Front-End Showcase Website
 
-## Local
+This repository contains the front-end implementation of **Magvice**, a showcase website developed during my internship at **Epekta**, a creative branding and web agency.
 
-### Requirements
+The project was discontinued by the client after the homepage was completed, but the codebase reflects the full front-end approach, tooling, and collaboration workflow used during the project.
 
-This project has a few requirements you should be aware of before installing:
+---
 
-* Laravel Framework 10.0+
-* Vite 5 & Vue.js 3
-* Node.js & NPM
+## 🧩 Project context
 
-### Installing
+- Client project developed during an internship
+- Front-end implementation of the **homepage**
+- Based on an existing **Figma design**
+- Project discontinued before full completion
 
-Clone the repository using:
+Despite the project being stopped, it was a **very valuable learning experience**, both technically and professionally.
 
-```
-git clone https://gitlab.com/slym-io/[PROJECT_NAME]
-```
+---
 
-Install all dependencies listed on *package.json* using:
+## 🏢 Agency & collaboration
 
-```
-npm install
-```
+This project was developed while I was an intern at **Epekta**  
+👉 https://www.epekta.com
 
-Install all dependencies listed on *composer.json* using:
+It was a **great team experience**:
+- supportive and skilled collaborators
+- strong creative culture
+- hands-on learning environment
 
-```
-php composer.phar install
-```
+I learned a lot and genuinely enjoyed working with the team.
 
-Create the *.env* file using *.env.example* and generate the key using:
+---
 
-```
-php artisan key:generate
-```
+## 🎨 Design
 
-Launch migrations using:
+The website was implemented based on a Figma mockup designed by **Fanny Fraselle**.
 
-```
-php artisan migrate
-```
+- UI / UX design: Fanny Fraselle  
+- LinkedIn: https://www.linkedin.com/in/fanny-fraselle-447b90142/
 
-### Updating
+My role focused on translating the design into a **clean, responsive and performant front-end**.
 
-Pull repository using:
+---
 
-```
-git pull 
-```
+## 🛠 Tech stack
 
-Update installation using:
-```
-php composer.phar local
-```
+- Laravel Blade (templating engine)
+- TypeScript
+- Vite
+- Tailwind CSS
+- SCSS
+- Swiper.js
 
-## Built With
+---
 
-* [Laravel](https://laravel.com/) - PHP framework
-* [Composer](https://getcomposer.org/) - PHP Package Manager
-* [Vue.js](https://vuejs.org) - JS Package Manager
-* [Vite](https://vitejs.dev) - JS Generation Tool
-* [NPM](https://www.npmjs.com/) - JS Package Manager
+## 🎯 Development goals
+
+- Accurate integration of the Figma design
+- Clean Blade templating structure
+- Utility-first styling with Tailwind
+- SCSS for structure and reusable patterns
+- Modern build tooling with Vite
+- Smooth interactions and sliders with Swiper
+- Maintainable and readable front-end code
+
+---
+

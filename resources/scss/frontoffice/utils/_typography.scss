@@ -6,6 +6,7 @@
     --gradient: linear-gradient(90deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
     --gradient-reverse: linear-gradient(-90deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
     --gradient-vertical: linear-gradient(180deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
+    --gradient-vertical-reverse: linear-gradient(0deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
   }
 
   * {
@@ -131,8 +132,6 @@
 
     &:hover,
     &:focus {
-      // background-color: transparent;
-
       &::after {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       }

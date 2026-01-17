@@ -25,7 +25,6 @@
     z-index: -1;
     border-radius: 100px;
     border: solid 5px transparent;
-    //--gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #16d0fb, #c11794 99%, transparent);
     --gradient-border: conic-gradient(
       from var(--border-angle),
       transparent 10%,
@@ -57,5 +56,124 @@
 @keyframes bg-spin {
   to {
     --border-angle: 1turn;
+  }
+}
+
+:root {
+  --gradient-test: linear-gradient(90deg, #c11794 0%, #c11794 25%, #854df1 50%, #16d0fb 75%);
+  --gradient-reverse: linear-gradient(-90deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
+  --gradient-vertical: linear-gradient(180deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
+  --gradient-vertical-reverse: linear-gradient(0deg, #c11794 0%, #854df1 50%, #16d0fb 100%);
+}
+
+// .div-gradient {
+//   height: 300px;
+//   width: 300px;
+//   border-radius: 50%;
+//   background-image: var(--gradient);
+//   animation: gradient-spin 3s ease infinite;
+//   transition: background-image 0.3s ease;
+// }
+
+// @keyframes gradient-spin {
+//   0% {
+//     background-image: var(--gradient);
+//   }
+//   25% {
+//     background-image: var(--gradient-vertical);
+//   }
+//   50% {
+//     background-image: var(--gradient-reverse);
+//   }
+//   75% {
+//     background-image: var(--gradient-vertical-reverse);
+//   }
+// }
+
+// .div-gradient {
+//   height: 300px;
+//   width: 300px;
+//   border-radius: 50%;
+//   background: var(--gradient);
+//   background-size: 200% 200%;
+//   animation: gradient-move 3s ease infinite;
+// }
+
+// @keyframes gradient-move {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
+
+.div-gradient {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background: var(--gradient);
+  animation: gradient-rotate 3s linear infinite;
+}
+
+@keyframes gradient-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-test {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 20px;
+  line-height: 1.41;
+  @apply text-[17px] font-medium;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  z-index: 2;
+  overflow: hidden;
+
+  &:hover {
+    &:before {
+      animation: gradient-rotate 1.5s linear infinite;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    inset: -80px;
+    background: var(--gradient-test);
+    z-index: -1;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    //border: 4px solid transparent;
+    background-color: white;
+    mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 3;
   }
 }

@@ -45,6 +45,7 @@
         <div class="mt-20 flex gap-20">
           <button class="btn">Primary button</button>
           <button class="btn btn--secondary">Secondary button</button>
+          <button class="btn-test">Secondary button</button>
         </div>
 
         <div class="my-20 flex gap-20">
@@ -54,6 +55,12 @@
 
         <div class="md:col-span-6">
           <img src="{{ asset('/images/placeholder.jpg') }}" alt="Lake">
+        </div>
+
+        <div class="col-span-6">
+          <div class="div-gradient mx-auto my-50">
+
+          </div>
         </div>
       </div>
   </section>
